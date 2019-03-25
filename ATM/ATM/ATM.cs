@@ -19,7 +19,9 @@ namespace ATM
 
         private void ATM_Load(object sender, EventArgs e)
         {
-            
+            label2.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
         }
         //when button "1" is pressed it adds "1" to the textbox
         private void numOneBtn_Click(object sender, EventArgs e)
@@ -90,6 +92,15 @@ namespace ATM
         private void enterBtn_Click(object sender, EventArgs e)
         {
             accountNumTextbox.Text = "";
+            //if account number matches the records then
+            label1.Visible = false;
+            label3.Visible = true;
+              //if the pin is wrong then 
+              label4.Visible = true;
+
+            //if the account number is wrong then
+            label2.Visible = true;
+            
         }
 
         private void clearBtn_Click(object sender, EventArgs e)
