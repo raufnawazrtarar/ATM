@@ -25,8 +25,7 @@ namespace ATM
 
         private void ATM_Load(object sender, EventArgs e)
         {
-            instructionsLbl.Text = "Enter Account Number";
-            wrongInputLbl.Text = "";
+            display();
         }
 
         private Account findAccount(int accountNumber)
@@ -107,6 +106,36 @@ namespace ATM
             accountNumTextbox.Text = "";
         }
 
+        private void display()
+        {
+            if (state == 1) // Account Number State
+            {
+                instructionsLbl.Text = "Enter Account Number";
+                wrongInputLbl.Text = "";
+                accountNumTextbox.MaxLength = 6;
+            }
+            else if (state == 2) // PIN State
+            {
+                instructionsLbl.Text = "Enter PIN";
+                wrongInputLbl.Text = "";
+                accountNumTextbox.MaxLength = 4;
+            }
+            else if (state == 3) // Display Options
+            {
+                instructionsLbl.Text = "We're In";
+                wrongInputLbl.Text = "";
+
+            }
+            else if (state == 4) // Get Amount to Withdraw
+            {
+
+            }
+            else if (state == 5) // Display Balance
+            {
+                instructionsLbl.Text = "Balance is £" + activeAccount.getBalance();
+            }
+        } 
+
         private void enterBtn_Click(object sender, EventArgs e)
         {
             if (state == 1) // Account Number State
@@ -117,8 +146,7 @@ namespace ATM
                 if (activeAccount != null)
                 {
                     state = 2;
-                    wrongInputLbl.Text = "";
-                    instructionsLbl.Text = "Enter PIN";
+                    display();
                 }
                 else
                     wrongInputLbl.Text = "Wrong Account Number";
@@ -128,21 +156,29 @@ namespace ATM
                 if (activeAccount.checkPin(Int32.Parse(accountNumTextbox.Text)))
                 {
                     state = 3;
-                    instructionsLbl.Text = "We're In";
-                    wrongInputLbl.Text = "";
+                    display();
                 }
                 else
                     wrongInputLbl.Text = "Wrong PIN";
 
                 accountNumTextbox.Text = "";
+
             }
-            else if (state == 3)
+            else if (state == 3) // Display Options
+            {
+                
+            }
+            else if (state == 4) // Get Amount to Withdraw
+            {
+
+            }
+            else if (state == 5) // Display Balance
             {
 
             }
 
             //if the pin is wrong then
-            
+
         }
 
         private void clearBtn_Click(object sender, EventArgs e)

@@ -90,25 +90,15 @@ namespace ATM
                 return false;
             }
         }
-
-        /*
-         * This funciton check the account pin against the argument passed to it
-         *
-         * returns:
-         * true if they match
-         * false if they do not
-         */
+        
         public Boolean checkPin(int pinEntered)
         {
             if (pinEntered == pin)
-            {
                 return true;
-            }
             else
-            {
                 return false;
-            }
         }
+
         public int getAccountNum()
         {
             return accountNum;
