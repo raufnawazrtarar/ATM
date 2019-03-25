@@ -30,7 +30,7 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.accountNumTextbox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.numOneBtn = new System.Windows.Forms.Button();
             this.numTwoBtn = new System.Windows.Forms.Button();
@@ -70,13 +70,13 @@
             this.label1.Text = "Please type in your account number";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox1
+            // accountNumTextbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(174, 120);
-            this.textBox1.MaxLength = 6;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 22);
-            this.textBox1.TabIndex = 2;
+            this.accountNumTextbox.Location = new System.Drawing.Point(77, 119);
+            this.accountNumTextbox.MaxLength = 6;
+            this.accountNumTextbox.Name = "accountNumTextbox";
+            this.accountNumTextbox.Size = new System.Drawing.Size(347, 22);
+            this.accountNumTextbox.TabIndex = 2;
             // 
             // panel1
             // 
@@ -106,24 +106,27 @@
             this.numOneBtn.TabIndex = 0;
             this.numOneBtn.Text = "1";
             this.numOneBtn.UseVisualStyleBackColor = true;
+            this.numOneBtn.Click += new System.EventHandler(this.numOneBtn_Click);
             // 
             // numTwoBtn
             // 
-            this.numTwoBtn.Location = new System.Drawing.Point(125, 0);
+            this.numTwoBtn.Location = new System.Drawing.Point(121, 0);
             this.numTwoBtn.Name = "numTwoBtn";
             this.numTwoBtn.Size = new System.Drawing.Size(115, 66);
             this.numTwoBtn.TabIndex = 1;
             this.numTwoBtn.Text = "2";
             this.numTwoBtn.UseVisualStyleBackColor = true;
+            this.numTwoBtn.Click += new System.EventHandler(this.numTwoBtn_Click);
             // 
             // numThreeBtn
             // 
-            this.numThreeBtn.Location = new System.Drawing.Point(246, 0);
+            this.numThreeBtn.Location = new System.Drawing.Point(242, 0);
             this.numThreeBtn.Name = "numThreeBtn";
             this.numThreeBtn.Size = new System.Drawing.Size(115, 66);
             this.numThreeBtn.TabIndex = 2;
             this.numThreeBtn.Text = "3";
             this.numThreeBtn.UseVisualStyleBackColor = true;
+            this.numThreeBtn.Click += new System.EventHandler(this.numThreeBtn_Click);
             // 
             // numFourBtn
             // 
@@ -133,6 +136,7 @@
             this.numFourBtn.TabIndex = 3;
             this.numFourBtn.Text = "4";
             this.numFourBtn.UseVisualStyleBackColor = true;
+            this.numFourBtn.Click += new System.EventHandler(this.numFourBtn_Click);
             // 
             // numFiveBtn
             // 
@@ -142,15 +146,17 @@
             this.numFiveBtn.TabIndex = 4;
             this.numFiveBtn.Text = "5";
             this.numFiveBtn.UseVisualStyleBackColor = true;
+            this.numFiveBtn.Click += new System.EventHandler(this.numFiveBtn_Click);
             // 
             // numSixBtn
             // 
-            this.numSixBtn.Location = new System.Drawing.Point(246, 72);
+            this.numSixBtn.Location = new System.Drawing.Point(242, 72);
             this.numSixBtn.Name = "numSixBtn";
             this.numSixBtn.Size = new System.Drawing.Size(115, 66);
             this.numSixBtn.TabIndex = 5;
             this.numSixBtn.Text = "6";
             this.numSixBtn.UseVisualStyleBackColor = true;
+            this.numSixBtn.Click += new System.EventHandler(this.numSixBtn_Click);
             // 
             // numSevenBtn
             // 
@@ -160,6 +166,7 @@
             this.numSevenBtn.TabIndex = 6;
             this.numSevenBtn.Text = "7";
             this.numSevenBtn.UseVisualStyleBackColor = true;
+            this.numSevenBtn.Click += new System.EventHandler(this.numSevenBtn_Click);
             // 
             // numEightBtn
             // 
@@ -169,15 +176,17 @@
             this.numEightBtn.TabIndex = 7;
             this.numEightBtn.Text = "8";
             this.numEightBtn.UseVisualStyleBackColor = true;
+            this.numEightBtn.Click += new System.EventHandler(this.numEightBtn_Click);
             // 
             // numNineBtn
             // 
-            this.numNineBtn.Location = new System.Drawing.Point(246, 144);
+            this.numNineBtn.Location = new System.Drawing.Point(242, 144);
             this.numNineBtn.Name = "numNineBtn";
             this.numNineBtn.Size = new System.Drawing.Size(115, 66);
             this.numNineBtn.TabIndex = 8;
             this.numNineBtn.Text = "9";
             this.numNineBtn.UseVisualStyleBackColor = true;
+            this.numNineBtn.Click += new System.EventHandler(this.numNineBtn_Click);
             // 
             // numZeroBtn
             // 
@@ -187,33 +196,37 @@
             this.numZeroBtn.TabIndex = 9;
             this.numZeroBtn.Text = "0";
             this.numZeroBtn.UseVisualStyleBackColor = true;
+            this.numZeroBtn.Click += new System.EventHandler(this.numZeroBtn_Click);
             // 
             // cancelBtn
             // 
-            this.cancelBtn.Location = new System.Drawing.Point(410, 3);
+            this.cancelBtn.Location = new System.Drawing.Point(410, 0);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(115, 66);
             this.cancelBtn.TabIndex = 10;
             this.cancelBtn.Text = "CANCEL";
             this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // clearBtn
             // 
-            this.clearBtn.Location = new System.Drawing.Point(410, 75);
+            this.clearBtn.Location = new System.Drawing.Point(410, 72);
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(115, 66);
             this.clearBtn.TabIndex = 11;
             this.clearBtn.Text = "CLEAR";
             this.clearBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
             // enterBtn
             // 
-            this.enterBtn.Location = new System.Drawing.Point(410, 147);
+            this.enterBtn.Location = new System.Drawing.Point(410, 144);
             this.enterBtn.Name = "enterBtn";
             this.enterBtn.Size = new System.Drawing.Size(115, 66);
             this.enterBtn.TabIndex = 12;
             this.enterBtn.Text = "ENTER";
             this.enterBtn.UseVisualStyleBackColor = true;
+            this.enterBtn.Click += new System.EventHandler(this.enterBtn_Click);
             // 
             // ATM
             // 
@@ -221,7 +234,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(551, 630);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.accountNumTextbox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "ATM";
@@ -238,7 +251,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox accountNumTextbox;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button enterBtn;
         private System.Windows.Forms.Button clearBtn;
