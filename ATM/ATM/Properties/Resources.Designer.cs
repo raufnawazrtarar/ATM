@@ -63,6 +63,26 @@ namespace ATM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backGroundImg {
+            get {
+                object obj = ResourceManager.GetObject("backGroundImg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bgImg {
+            get {
+                object obj = ResourceManager.GetObject("bgImg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BlueScreenImg {
             get {
                 object obj = ResourceManager.GetObject("BlueScreenImg", resourceCulture);
