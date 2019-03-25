@@ -12,75 +12,93 @@ namespace ATM
 {
     public partial class ATM : Form
     {
-        public ATM()
+        private Account[] ac;
+        private Account activeAccount;
+        private int state;
+
+        public ATM(Account[] ac)
         {
             InitializeComponent();
+            this.ac = ac;
+            state = 1;
         }
 
         private void ATM_Load(object sender, EventArgs e)
         {
-            label2.Visible = false;
-            label3.Visible = false;
-            label4.Visible = false;
+            instructionsLbl.Text = "Enter Account Number";
+            wrongInputLbl.Text = "";
         }
+
+        private Account findAccount(int accountNumber)
+        {
+            for (int i = 0; i < ac.Length; i++)
+            {
+                if (ac[i].getAccountNum() == accountNumber)
+                {
+                    return ac[i];
+                }
+            }
+            return null;
+        }
+
         //when button "1" is pressed it adds "1" to the textbox
         private void numOneBtn_Click(object sender, EventArgs e)
         {
-            accountNumTextbox.Text = accountNumTextbox.Text + "1";
+            if (accountNumTextbox.Text.Length < accountNumTextbox.MaxLength) accountNumTextbox.Text = accountNumTextbox.Text + "1";
         }
 
         //when button "2" is pressed it adds "2" to the textbox
         private void numTwoBtn_Click(object sender, EventArgs e)
         {
-            accountNumTextbox.Text = accountNumTextbox.Text + "2";
+            if (accountNumTextbox.Text.Length<accountNumTextbox.MaxLength) accountNumTextbox.Text = accountNumTextbox.Text + "2";
         }
 
         //when button "3" is pressed it adds "3" to the textbox
         private void numThreeBtn_Click(object sender, EventArgs e)
         {
-            accountNumTextbox.Text = accountNumTextbox.Text + "3";
+            if (accountNumTextbox.Text.Length < accountNumTextbox.MaxLength) accountNumTextbox.Text = accountNumTextbox.Text + "3";
         }
 
         //when button "4" is pressed it adds "4" to the textbox
         private void numFourBtn_Click(object sender, EventArgs e)
         {
-            accountNumTextbox.Text = accountNumTextbox.Text + "4";
+            if (accountNumTextbox.Text.Length < accountNumTextbox.MaxLength) accountNumTextbox.Text = accountNumTextbox.Text + "4";
         }
 
         //when button "5" is pressed it adds "5" to the textbox
         private void numFiveBtn_Click(object sender, EventArgs e)
         {
-            accountNumTextbox.Text = accountNumTextbox.Text + "5";
+            if (accountNumTextbox.Text.Length < accountNumTextbox.MaxLength) accountNumTextbox.Text = accountNumTextbox.Text + "5";
         }
 
         //when button "6" is pressed it adds "6" to the textbox
         private void numSixBtn_Click(object sender, EventArgs e)
         {
-            accountNumTextbox.Text = accountNumTextbox.Text + "6";
+            if (accountNumTextbox.Text.Length < accountNumTextbox.MaxLength) accountNumTextbox.Text = accountNumTextbox.Text + "6";
         }
 
         //when button "7" is pressed it adds "7" to the textbox
         private void numSevenBtn_Click(object sender, EventArgs e)
         {
-            accountNumTextbox.Text = accountNumTextbox.Text + "7";
+            if (accountNumTextbox.Text.Length < accountNumTextbox.MaxLength) accountNumTextbox.Text = accountNumTextbox.Text + "7";
         }
 
         //when button "8" is pressed it adds "8" to the textbox
         private void numEightBtn_Click(object sender, EventArgs e)
         {
-            accountNumTextbox.Text = accountNumTextbox.Text + "8";
+            if (accountNumTextbox.Text.Length < accountNumTextbox.MaxLength) accountNumTextbox.Text = accountNumTextbox.Text + "8";
         }
 
         //when button "9" is pressed it adds "9" to the textbox
         private void numNineBtn_Click(object sender, EventArgs e)
         {
-            accountNumTextbox.Text = accountNumTextbox.Text + "9";
+            if (accountNumTextbox.Text.Length < accountNumTextbox.MaxLength) accountNumTextbox.Text = accountNumTextbox.Text + "9";
         }
 
         //when button "0" is pressed it adds "0" to the textbox
         private void numZeroBtn_Click(object sender, EventArgs e)
         {
-            accountNumTextbox.Text = accountNumTextbox.Text + "0";
+            if (accountNumTextbox.Text.Length < accountNumTextbox.MaxLength) accountNumTextbox.Text = accountNumTextbox.Text + "0";
         }
 
 
@@ -91,15 +109,39 @@ namespace ATM
 
         private void enterBtn_Click(object sender, EventArgs e)
         {
-            accountNumTextbox.Text = "";
-            //if account number matches the records then
-            label1.Visible = false;
-            label3.Visible = true;
-              //if the pin is wrong then 
-              label4.Visible = true;
+            if (state == 1) // Account Number State
+            {
+                activeAccount = findAccount(Int32.Parse(accountNumTextbox.Text));
+                accountNumTextbox.Text = "";
 
-            //if the account number is wrong then
-            label2.Visible = true;
+                if (activeAccount != null)
+                {
+                    state = 2;
+                    wrongInputLbl.Text = "";
+                    instructionsLbl.Text = "Enter PIN";
+                }
+                else
+                    wrongInputLbl.Text = "Wrong Account Number";
+            }
+            else if (state == 2) // PIN State
+            {
+                if (activeAccount.checkPin(Int32.Parse(accountNumTextbox.Text)))
+                {
+                    state = 3;
+                    instructionsLbl.Text = "We're In";
+                    wrongInputLbl.Text = "";
+                }
+                else
+                    wrongInputLbl.Text = "Wrong PIN";
+
+                accountNumTextbox.Text = "";
+            }
+            else if (state == 3)
+            {
+
+            }
+
+            //if the pin is wrong then
             
         }
 

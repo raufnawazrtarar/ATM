@@ -33,9 +33,10 @@
             // 
             // openNewATM
             // 
-            this.openNewATM.Location = new System.Drawing.Point(30, 370);
+            this.openNewATM.Location = new System.Drawing.Point(22, 301);
+            this.openNewATM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.openNewATM.Name = "openNewATM";
-            this.openNewATM.Size = new System.Drawing.Size(122, 55);
+            this.openNewATM.Size = new System.Drawing.Size(92, 45);
             this.openNewATM.TabIndex = 0;
             this.openNewATM.Text = "Open New ATM";
             this.openNewATM.UseVisualStyleBackColor = true;
@@ -43,15 +44,17 @@
             // 
             // CentralComputer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ATM.Properties.Resources.Logo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(468, 451);
+            this.ClientSize = new System.Drawing.Size(351, 366);
             this.Controls.Add(this.openNewATM);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CentralComputer";
             this.Text = "Central Computer";
+            this.Load += new System.EventHandler(this.CentralComputer_Load);
             this.ResumeLayout(false);
 
         }

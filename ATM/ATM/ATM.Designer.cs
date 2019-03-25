@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.instructionsLbl = new System.Windows.Forms.Label();
             this.accountNumTextbox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.enterBtn = new System.Windows.Forms.Button();
@@ -45,9 +45,7 @@
             this.numThreeBtn = new System.Windows.Forms.Button();
             this.numTwoBtn = new System.Windows.Forms.Button();
             this.numOneBtn = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.wrongInputLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -56,29 +54,32 @@
             // 
             this.pictureBox1.BackgroundImage = global::ATM.Properties.Resources.BlueScreenImg;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(528, 339);
+            this.pictureBox1.Size = new System.Drawing.Size(396, 275);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // instructionsLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(73, 75);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(351, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Please type in your account number";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.instructionsLbl.AutoSize = true;
+            this.instructionsLbl.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.instructionsLbl.Location = new System.Drawing.Point(55, 62);
+            this.instructionsLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.instructionsLbl.Name = "instructionsLbl";
+            this.instructionsLbl.Size = new System.Drawing.Size(287, 17);
+            this.instructionsLbl.TabIndex = 1;
+            this.instructionsLbl.Text = "Please type in your account number";
+            this.instructionsLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // accountNumTextbox
             // 
-            this.accountNumTextbox.Location = new System.Drawing.Point(77, 119);
+            this.accountNumTextbox.Location = new System.Drawing.Point(58, 97);
+            this.accountNumTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.accountNumTextbox.MaxLength = 6;
             this.accountNumTextbox.Name = "accountNumTextbox";
-            this.accountNumTextbox.Size = new System.Drawing.Size(347, 22);
+            this.accountNumTextbox.Size = new System.Drawing.Size(261, 20);
             this.accountNumTextbox.TabIndex = 2;
             // 
             // panel1
@@ -96,16 +97,18 @@
             this.panel1.Controls.Add(this.numThreeBtn);
             this.panel1.Controls.Add(this.numTwoBtn);
             this.panel1.Controls.Add(this.numOneBtn);
-            this.panel1.Location = new System.Drawing.Point(12, 344);
+            this.panel1.Location = new System.Drawing.Point(9, 280);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(528, 284);
+            this.panel1.Size = new System.Drawing.Size(396, 231);
             this.panel1.TabIndex = 3;
             // 
             // enterBtn
             // 
-            this.enterBtn.Location = new System.Drawing.Point(410, 144);
+            this.enterBtn.Location = new System.Drawing.Point(308, 117);
+            this.enterBtn.Margin = new System.Windows.Forms.Padding(2);
             this.enterBtn.Name = "enterBtn";
-            this.enterBtn.Size = new System.Drawing.Size(115, 66);
+            this.enterBtn.Size = new System.Drawing.Size(86, 54);
             this.enterBtn.TabIndex = 12;
             this.enterBtn.Text = "ENTER";
             this.enterBtn.UseVisualStyleBackColor = true;
@@ -113,9 +116,10 @@
             // 
             // clearBtn
             // 
-            this.clearBtn.Location = new System.Drawing.Point(410, 72);
+            this.clearBtn.Location = new System.Drawing.Point(308, 58);
+            this.clearBtn.Margin = new System.Windows.Forms.Padding(2);
             this.clearBtn.Name = "clearBtn";
-            this.clearBtn.Size = new System.Drawing.Size(115, 66);
+            this.clearBtn.Size = new System.Drawing.Size(86, 54);
             this.clearBtn.TabIndex = 11;
             this.clearBtn.Text = "CLEAR";
             this.clearBtn.UseVisualStyleBackColor = true;
@@ -123,9 +127,10 @@
             // 
             // cancelBtn
             // 
-            this.cancelBtn.Location = new System.Drawing.Point(410, 0);
+            this.cancelBtn.Location = new System.Drawing.Point(308, 0);
+            this.cancelBtn.Margin = new System.Windows.Forms.Padding(2);
             this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(115, 66);
+            this.cancelBtn.Size = new System.Drawing.Size(86, 54);
             this.cancelBtn.TabIndex = 10;
             this.cancelBtn.Text = "CANCEL";
             this.cancelBtn.UseVisualStyleBackColor = true;
@@ -133,9 +138,10 @@
             // 
             // numZeroBtn
             // 
-            this.numZeroBtn.Location = new System.Drawing.Point(121, 216);
+            this.numZeroBtn.Location = new System.Drawing.Point(91, 176);
+            this.numZeroBtn.Margin = new System.Windows.Forms.Padding(2);
             this.numZeroBtn.Name = "numZeroBtn";
-            this.numZeroBtn.Size = new System.Drawing.Size(115, 66);
+            this.numZeroBtn.Size = new System.Drawing.Size(86, 54);
             this.numZeroBtn.TabIndex = 9;
             this.numZeroBtn.Text = "0";
             this.numZeroBtn.UseVisualStyleBackColor = true;
@@ -143,9 +149,10 @@
             // 
             // numNineBtn
             // 
-            this.numNineBtn.Location = new System.Drawing.Point(242, 144);
+            this.numNineBtn.Location = new System.Drawing.Point(182, 117);
+            this.numNineBtn.Margin = new System.Windows.Forms.Padding(2);
             this.numNineBtn.Name = "numNineBtn";
-            this.numNineBtn.Size = new System.Drawing.Size(115, 66);
+            this.numNineBtn.Size = new System.Drawing.Size(86, 54);
             this.numNineBtn.TabIndex = 8;
             this.numNineBtn.Text = "9";
             this.numNineBtn.UseVisualStyleBackColor = true;
@@ -153,9 +160,10 @@
             // 
             // numEightBtn
             // 
-            this.numEightBtn.Location = new System.Drawing.Point(121, 144);
+            this.numEightBtn.Location = new System.Drawing.Point(91, 117);
+            this.numEightBtn.Margin = new System.Windows.Forms.Padding(2);
             this.numEightBtn.Name = "numEightBtn";
-            this.numEightBtn.Size = new System.Drawing.Size(115, 66);
+            this.numEightBtn.Size = new System.Drawing.Size(86, 54);
             this.numEightBtn.TabIndex = 7;
             this.numEightBtn.Text = "8";
             this.numEightBtn.UseVisualStyleBackColor = true;
@@ -163,9 +171,10 @@
             // 
             // numSevenBtn
             // 
-            this.numSevenBtn.Location = new System.Drawing.Point(0, 144);
+            this.numSevenBtn.Location = new System.Drawing.Point(0, 117);
+            this.numSevenBtn.Margin = new System.Windows.Forms.Padding(2);
             this.numSevenBtn.Name = "numSevenBtn";
-            this.numSevenBtn.Size = new System.Drawing.Size(115, 66);
+            this.numSevenBtn.Size = new System.Drawing.Size(86, 54);
             this.numSevenBtn.TabIndex = 6;
             this.numSevenBtn.Text = "7";
             this.numSevenBtn.UseVisualStyleBackColor = true;
@@ -173,9 +182,10 @@
             // 
             // numSixBtn
             // 
-            this.numSixBtn.Location = new System.Drawing.Point(242, 72);
+            this.numSixBtn.Location = new System.Drawing.Point(182, 58);
+            this.numSixBtn.Margin = new System.Windows.Forms.Padding(2);
             this.numSixBtn.Name = "numSixBtn";
-            this.numSixBtn.Size = new System.Drawing.Size(115, 66);
+            this.numSixBtn.Size = new System.Drawing.Size(86, 54);
             this.numSixBtn.TabIndex = 5;
             this.numSixBtn.Text = "6";
             this.numSixBtn.UseVisualStyleBackColor = true;
@@ -183,9 +193,10 @@
             // 
             // numFiveBtn
             // 
-            this.numFiveBtn.Location = new System.Drawing.Point(121, 72);
+            this.numFiveBtn.Location = new System.Drawing.Point(91, 58);
+            this.numFiveBtn.Margin = new System.Windows.Forms.Padding(2);
             this.numFiveBtn.Name = "numFiveBtn";
-            this.numFiveBtn.Size = new System.Drawing.Size(115, 66);
+            this.numFiveBtn.Size = new System.Drawing.Size(86, 54);
             this.numFiveBtn.TabIndex = 4;
             this.numFiveBtn.Text = "5";
             this.numFiveBtn.UseVisualStyleBackColor = true;
@@ -193,9 +204,10 @@
             // 
             // numFourBtn
             // 
-            this.numFourBtn.Location = new System.Drawing.Point(0, 72);
+            this.numFourBtn.Location = new System.Drawing.Point(0, 58);
+            this.numFourBtn.Margin = new System.Windows.Forms.Padding(2);
             this.numFourBtn.Name = "numFourBtn";
-            this.numFourBtn.Size = new System.Drawing.Size(115, 66);
+            this.numFourBtn.Size = new System.Drawing.Size(86, 54);
             this.numFourBtn.TabIndex = 3;
             this.numFourBtn.Text = "4";
             this.numFourBtn.UseVisualStyleBackColor = true;
@@ -203,9 +215,10 @@
             // 
             // numThreeBtn
             // 
-            this.numThreeBtn.Location = new System.Drawing.Point(242, 0);
+            this.numThreeBtn.Location = new System.Drawing.Point(182, 0);
+            this.numThreeBtn.Margin = new System.Windows.Forms.Padding(2);
             this.numThreeBtn.Name = "numThreeBtn";
-            this.numThreeBtn.Size = new System.Drawing.Size(115, 66);
+            this.numThreeBtn.Size = new System.Drawing.Size(86, 54);
             this.numThreeBtn.TabIndex = 2;
             this.numThreeBtn.Text = "3";
             this.numThreeBtn.UseVisualStyleBackColor = true;
@@ -213,9 +226,10 @@
             // 
             // numTwoBtn
             // 
-            this.numTwoBtn.Location = new System.Drawing.Point(121, 0);
+            this.numTwoBtn.Location = new System.Drawing.Point(91, 0);
+            this.numTwoBtn.Margin = new System.Windows.Forms.Padding(2);
             this.numTwoBtn.Name = "numTwoBtn";
-            this.numTwoBtn.Size = new System.Drawing.Size(115, 66);
+            this.numTwoBtn.Size = new System.Drawing.Size(86, 54);
             this.numTwoBtn.TabIndex = 1;
             this.numTwoBtn.Text = "2";
             this.numTwoBtn.UseVisualStyleBackColor = true;
@@ -224,60 +238,38 @@
             // numOneBtn
             // 
             this.numOneBtn.Location = new System.Drawing.Point(0, 0);
+            this.numOneBtn.Margin = new System.Windows.Forms.Padding(2);
             this.numOneBtn.Name = "numOneBtn";
-            this.numOneBtn.Size = new System.Drawing.Size(115, 66);
+            this.numOneBtn.Size = new System.Drawing.Size(86, 54);
             this.numOneBtn.TabIndex = 0;
             this.numOneBtn.Text = "1";
             this.numOneBtn.UseVisualStyleBackColor = true;
             this.numOneBtn.Click += new System.EventHandler(this.numOneBtn_Click);
             // 
-            // label2
+            // wrongInputLbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(73, 161);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(404, 20);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Wrong Account number. Please try again ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(73, 75);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(232, 20);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Please type in your PIN";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(73, 161);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(283, 20);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Wrong PIN. Please try again ";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.wrongInputLbl.AutoSize = true;
+            this.wrongInputLbl.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wrongInputLbl.ForeColor = System.Drawing.Color.Red;
+            this.wrongInputLbl.Location = new System.Drawing.Point(55, 131);
+            this.wrongInputLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.wrongInputLbl.Name = "wrongInputLbl";
+            this.wrongInputLbl.Size = new System.Drawing.Size(332, 17);
+            this.wrongInputLbl.TabIndex = 5;
+            this.wrongInputLbl.Text = "Wrong Account number. Please try again ";
+            this.wrongInputLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // ATM
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 630);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(413, 512);
+            this.Controls.Add(this.wrongInputLbl);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.accountNumTextbox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.instructionsLbl);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ATM";
             this.Text = "ATM";
             this.Load += new System.EventHandler(this.ATM_Load);
@@ -291,7 +283,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label instructionsLbl;
         private System.Windows.Forms.TextBox accountNumTextbox;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button enterBtn;
@@ -307,8 +299,6 @@
         private System.Windows.Forms.Button numThreeBtn;
         private System.Windows.Forms.Button numTwoBtn;
         private System.Windows.Forms.Button numOneBtn;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label wrongInputLbl;
     }
 }
