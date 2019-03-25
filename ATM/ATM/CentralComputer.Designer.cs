@@ -33,7 +33,7 @@
             // 
             // openNewATM
             // 
-            this.openNewATM.Location = new System.Drawing.Point(296, 306);
+            this.openNewATM.Location = new System.Drawing.Point(30, 370);
             this.openNewATM.Name = "openNewATM";
             this.openNewATM.Size = new System.Drawing.Size(122, 55);
             this.openNewATM.TabIndex = 0;
@@ -45,8 +45,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(481, 426);
+            this.BackgroundImage = global::ATM.Properties.Resources.Logo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(468, 451);
             this.Controls.Add(this.openNewATM);
+            this.DoubleBuffered = true;
             this.Name = "CentralComputer";
             this.Text = "Central Computer";
             this.ResumeLayout(false);

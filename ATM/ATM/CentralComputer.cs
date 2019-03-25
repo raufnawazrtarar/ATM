@@ -18,7 +18,7 @@ namespace ATM
             InitializeComponent();
         }
 
-        public void runATM()
+        public void RunATM()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -27,7 +27,7 @@ namespace ATM
 
         private void openNewATM_Click(object sender, EventArgs e)
         {
-            Thread ATM_t = new Thread(runATM);
+            Thread ATM_t = new Thread(RunATM);
             ATM_t.Start();
             
         }
