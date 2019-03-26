@@ -112,12 +112,12 @@ namespace ATM
             {
                 instructionsLbl.Text = "Enter Account Number";
                 wrongInputLbl.Text = "";
-                label1.Text = "";
-                label2.Text = "";
-                label3.Text = "";
-                label4.Text = "";
-                label5.Text = "";
-                label6.Text = "";
+                option1Lbl.Text = "";
+                option2Lbl.Text = "";
+                option3Lbl.Text = "";
+                option4Lbl.Text = "";
+                option5Lbl.Text = "";
+                option6Lbl.Text = "";
                 accountNumTextbox.MaxLength = 6;
             }
             else if (state == 2) // PIN State
@@ -131,33 +131,33 @@ namespace ATM
                 instructionsLbl.Text = "Options";
                 wrongInputLbl.Text = "";
                 accountNumTextbox.Visible = false;
-                label1.Text = "Withdraw Cash";
-                label2.Text = "";
-                label3.Text = "";
-                label4.Text = "Display Balance";
-                label5.Text = "";
-                label6.Text = "";
+                option1Lbl.Text = "Withdraw Cash";
+                option2Lbl.Text = "";
+                option3Lbl.Text = "";
+                option4Lbl.Text = "Display Balance";
+                option5Lbl.Text = "";
+                option6Lbl.Text = "";
 
             }
             else if (state == 4) // Get Amount to Withdraw
             {
                 instructionsLbl.Text = "Choose Amount to Withdraw";
                 wrongInputLbl.Text = "";
-                label1.Text = "£10";
-                label2.Text = "£20";
-                label3.Text = "£50";
-                label4.Text = "£100";
-                label5.Text = "£200";
-                label6.Text = "Other";
+                option1Lbl.Text = "£10";
+                option2Lbl.Text = "£20";
+                option3Lbl.Text = "£50";
+                option4Lbl.Text = "£100";
+                option5Lbl.Text = "£200";
+                option6Lbl.Text = "Other";
             }
             else if (state == 5) // Display Balance
             {
-                label1.Text = "";
-                label2.Text = "";
-                label3.Text = "";
-                label4.Text = "";
-                label5.Text = "";
-                label6.Text = "";
+                option1Lbl.Text = "";
+                option2Lbl.Text = "";
+                option3Lbl.Text = "";
+                option4Lbl.Text = "";
+                option5Lbl.Text = "";
+                option6Lbl.Text = "";
                 activeAccount.accessed.WaitOne();
                 instructionsLbl.Text = "Balance is £" + activeAccount.getBalance();
                 activeAccount.accessed.Release();
