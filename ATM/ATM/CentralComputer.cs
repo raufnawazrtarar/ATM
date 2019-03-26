@@ -50,7 +50,6 @@ namespace ATM
         private int balance;
         private int pin;
         private int accountNum;
-        public Semaphore accessed;
 
         // a constructor that takes initial values for each of the attributes (balance, pin, accountNumber)
         public Account(int balance, int pin, int accountNum)
@@ -58,7 +57,6 @@ namespace ATM
             this.balance = balance;
             this.pin = pin;
             this.accountNum = accountNum;
-            accessed = new Semaphore(0, 1);
         }
 
         //getter and setter functions for balance
