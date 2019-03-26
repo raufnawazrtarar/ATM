@@ -16,6 +16,7 @@ namespace ATM
         private Account activeAccount;
         private int state;
 
+        // Constructor for ATM
         public ATM(Account[] ac)
         {
             InitializeComponent();
@@ -23,11 +24,13 @@ namespace ATM
             state = 1;
         }
 
+        // Function upon loading form
         private void ATM_Load(object sender, EventArgs e)
         {
             display();
         }
 
+        // Return the account with the corresponding account number
         private Account findAccount(int accountNumber)
         {
             for (int i = 0; i < ac.Length; i++)
@@ -100,12 +103,13 @@ namespace ATM
             if (accountNumTextbox.Text.Length < accountNumTextbox.MaxLength) accountNumTextbox.Text = accountNumTextbox.Text + "0";
         }
 
-        //Closes the current ATM
+        // When cancel button is pressed
         private void cancelBtn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        // Display to the screen depending on the system state
         private void display()
         {
             if (state == 1) // Account Number State
@@ -119,6 +123,7 @@ namespace ATM
                 option5Lbl.Text = "";
                 option6Lbl.Text = "";
                 accountNumTextbox.MaxLength = 6;
+                accountNumTextbox.Visible = true;
             }
             else if (state == 2) // PIN State
             {
@@ -157,7 +162,7 @@ namespace ATM
                 option3Lbl.Text = "";
                 option4Lbl.Text = "";
                 option5Lbl.Text = "";
-                option6Lbl.Text = "";
+                option6Lbl.Text = "Press to Continue";
                 activeAccount.accessed.WaitOne();
                 instructionsLbl.Text = "Balance is £" + activeAccount.getBalance();
                 activeAccount.accessed.Release();
@@ -183,11 +188,12 @@ namespace ATM
                 option3Lbl.Text = "";
                 option4Lbl.Text = "";
                 option5Lbl.Text = "";
-                option6Lbl.Text = "";
+                option6Lbl.Text = "Press to continue";
                 accountNumTextbox.Visible = true;
             }
         } 
 
+        // When green enter button is pressed
         private void enterBtn_Click(object sender, EventArgs e)
         {
             if (state == 1) // Account Number State
@@ -195,31 +201,32 @@ namespace ATM
                 activeAccount = findAccount(Int32.Parse(accountNumTextbox.Text));
                 accountNumTextbox.Text = "";
 
-                if (activeAccount != null)
+                if (activeAccount != null) // If account number successful
                 {
-                    state = 2;
+                    state = 2; // PIN State
                     display();
                 }
                 else
+                { 
                     wrongInputLbl.Text = "Wrong Account Number";
+                }
             }
             else if (state == 2) // PIN State
             {
-                if (activeAccount.checkPin(Int32.Parse(accountNumTextbox.Text)))
+                if (activeAccount.checkPin(Int32.Parse(accountNumTextbox.Text))) // If PIN correct
                 {
-                    state = 3;
+                    state = 3; // Main Menu State
                     display();
                 }
                 else
+                {
                     wrongInputLbl.Text = "Wrong PIN";
-
+                }
                 accountNumTextbox.Text = "";
-
             }
-
-            //if the pin is wrong then
         }
 
+        // When yellow clear button is pressed
         private void clearBtn_Click(object sender, EventArgs e)
         {
             state = 1;
@@ -227,6 +234,7 @@ namespace ATM
             activeAccount = null;
         }
 
+        // When option 1 button is pressed
         private void option1Btn_Click(object sender, EventArgs e)
         {
             if (state == 3)
@@ -249,6 +257,7 @@ namespace ATM
             }
         }
 
+        // When option 2 button is pressed
         private void option2Btn_Click(object sender, EventArgs e)
         {
             if (state == 3)
@@ -270,6 +279,7 @@ namespace ATM
             }
         }
 
+        // When option 3 button is pressed 
         private void option3Btn_Click(object sender, EventArgs e)
         {
             if (state == 4)
@@ -285,6 +295,7 @@ namespace ATM
             }
         }
 
+        // When option 4 button is pressed
         private void option4Btn_Click(object sender, EventArgs e)
         {
             if (state == 4)
@@ -300,6 +311,7 @@ namespace ATM
             }
         }
 
+        // When option 5 button is pressed
         private void option5Btn_Click(object sender, EventArgs e)
         {
             if (state == 4)
@@ -315,6 +327,7 @@ namespace ATM
             }
         }
 
+        // When option 6 button is pressed
         private void option6Btn_Click(object sender, EventArgs e)
         {
             if (state == 4)
@@ -322,7 +335,7 @@ namespace ATM
                 state = 6;
                 display();
             }
-            else if (state == 5)
+            else if (state == 5 || state == 7)
             {
                 state = 1;
                 display();
