@@ -101,5 +101,44 @@
   <ItemGroup>
     <None Include="Resources\bgImg.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enter.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
