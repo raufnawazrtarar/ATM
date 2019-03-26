@@ -128,8 +128,15 @@ namespace ATM
             }
             else if (state == 3) // Display Options
             {
-                instructionsLbl.Text = "We're In";
+                instructionsLbl.Text = "Options";
                 wrongInputLbl.Text = "";
+                accountNumTextbox.Visible = false;
+                label1.Text = "Withdraw Cash";
+                label2.Text = "";
+                label3.Text = "";
+                label4.Text = "Display Balance";
+                label5.Text = "";
+                label6.Text = "";
 
             }
             else if (state == 4) // Get Amount to Withdraw
