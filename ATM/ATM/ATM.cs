@@ -132,9 +132,9 @@ namespace ATM
                 wrongInputLbl.Text = "";
                 accountNumTextbox.Visible = false;
                 option1Lbl.Text = "Withdraw Cash";
-                option2Lbl.Text = "";
+                option2Lbl.Text = "Display Balance";
                 option3Lbl.Text = "";
-                option4Lbl.Text = "Display Balance";
+                option4Lbl.Text = "";
                 option5Lbl.Text = "";
                 option6Lbl.Text = "";
 
@@ -161,6 +161,30 @@ namespace ATM
                 activeAccount.accessed.WaitOne();
                 instructionsLbl.Text = "Balance is £" + activeAccount.getBalance();
                 activeAccount.accessed.Release();
+            }
+            else if (state == 6) // Display Balance
+            {
+                instructionsLbl.Text = "Choose Amount to Withdraw";
+                wrongInputLbl.Text = "";
+                option1Lbl.Text = "";
+                option2Lbl.Text = "";
+                option3Lbl.Text = "";
+                option4Lbl.Text = "";
+                option5Lbl.Text = "";
+                option6Lbl.Text = "";
+                accountNumTextbox.Visible = true;
+            }
+            else if (state == 7) // Display Balance
+            {
+                instructionsLbl.Text = "Insufficiant Funds";
+                wrongInputLbl.Text = "";
+                option1Lbl.Text = "";
+                option2Lbl.Text = "";
+                option3Lbl.Text = "";
+                option4Lbl.Text = "";
+                option5Lbl.Text = "";
+                option6Lbl.Text = "";
+                accountNumTextbox.Visible = true;
             }
         } 
 
@@ -192,26 +216,117 @@ namespace ATM
                 accountNumTextbox.Text = "";
 
             }
-            else if (state == 3) // Display Options
-            {
-                
-            }
-            else if (state == 4) // Get Amount to Withdraw
-            {
-
-            }
-            else if (state == 5) // Display Balance
-            {
-
-            }
 
             //if the pin is wrong then
-
         }
 
         private void clearBtn_Click(object sender, EventArgs e)
         {
-            accountNumTextbox.Text = "";
+            state = 1;
+            display();
+            activeAccount = null;
+        }
+
+        private void option1Btn_Click(object sender, EventArgs e)
+        {
+            if (state == 3)
+            {
+                state = 4;
+                display();
+            }
+            else if (state == 4)
+            {
+                activeAccount.accessed.WaitOne();
+                if (activeAccount.decrementBalance(10))
+                    state = 1;
+                else
+                    state = 7;
+
+                display();
+                activeAccount.accessed.Release();
+                state = 5;
+                display();
+            }
+        }
+
+        private void option2Btn_Click(object sender, EventArgs e)
+        {
+            if (state == 3)
+            {
+                state = 5;
+                display();
+            }
+            else if (state == 4)
+            {
+                activeAccount.accessed.WaitOne();
+
+                if (activeAccount.decrementBalance(20))
+                    state = 1;
+                else
+                    state = 7;
+
+                display();
+                activeAccount.accessed.Release();
+            }
+        }
+
+        private void option3Btn_Click(object sender, EventArgs e)
+        {
+            if (state == 4)
+            {
+                activeAccount.accessed.WaitOne();
+                if (activeAccount.decrementBalance(50))
+                    state = 1;
+                else
+                    state = 7;
+
+                display();
+                activeAccount.accessed.Release();
+            }
+        }
+
+        private void option4Btn_Click(object sender, EventArgs e)
+        {
+            if (state == 4)
+            {
+                activeAccount.accessed.WaitOne();
+                if (activeAccount.decrementBalance(100))
+                    state = 1;
+                else
+                    state = 7;
+
+                display();
+                activeAccount.accessed.Release();
+            }
+        }
+
+        private void option5Btn_Click(object sender, EventArgs e)
+        {
+            if (state == 4)
+            {
+                activeAccount.accessed.WaitOne();
+                if (activeAccount.decrementBalance(200))
+                    state = 1;
+                else
+                    state = 7;
+
+                display();
+                activeAccount.accessed.Release();
+            }
+        }
+
+        private void option6Btn_Click(object sender, EventArgs e)
+        {
+            if (state == 4)
+            {
+                state = 6;
+                display();
+            }
+            else if (state == 5)
+            {
+                state = 1;
+                display();
+            }
         }
     }
 }

@@ -35,7 +35,6 @@ namespace ATM
         {
             Thread ATM_t = new Thread(RunATM);
             ATM_t.Start();
-            
         }
 
         private void CentralComputer_Load(object sender, EventArgs e)
@@ -58,7 +57,7 @@ namespace ATM
             this.balance = balance;
             this.pin = pin;
             this.accountNum = accountNum;
-            accessed = new Semaphore(0, 1);
+            accessed = new Semaphore(1, 1);
         }
 
         //getter and setter functions for balance
