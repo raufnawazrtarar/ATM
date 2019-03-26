@@ -128,14 +128,11 @@ namespace ATM
             }
             else if (state == 4) // Get Amount to Withdraw
             {
-                instructionsLbl.Text = "Choose Amount to Withdraw";
-                wrongInputLbl.Text = "";
+
             }
             else if (state == 5) // Display Balance
             {
-                activeAccount.accessed.WaitOne();
                 instructionsLbl.Text = "Balance is £" + activeAccount.getBalance();
-                activeAccount.accessed.Release();
             }
         } 
 
