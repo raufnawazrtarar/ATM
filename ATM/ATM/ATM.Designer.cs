@@ -98,144 +98,157 @@
             // 
             // enterBtn
             // 
+            this.enterBtn.BackgroundImage = global::ATM.Properties.Resources.enter;
+            this.enterBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.enterBtn.Location = new System.Drawing.Point(411, 144);
             this.enterBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.enterBtn.Name = "enterBtn";
             this.enterBtn.Size = new System.Drawing.Size(115, 66);
             this.enterBtn.TabIndex = 12;
-            this.enterBtn.Text = "ENTER";
             this.enterBtn.UseVisualStyleBackColor = true;
             this.enterBtn.Click += new System.EventHandler(this.enterBtn_Click);
             // 
             // clearBtn
             // 
+            this.clearBtn.BackgroundImage = global::ATM.Properties.Resources.clear;
+            this.clearBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.clearBtn.Location = new System.Drawing.Point(411, 71);
             this.clearBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(115, 66);
             this.clearBtn.TabIndex = 11;
-            this.clearBtn.Text = "CLEAR";
             this.clearBtn.UseVisualStyleBackColor = true;
             this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
             // cancelBtn
             // 
+            this.cancelBtn.BackgroundImage = global::ATM.Properties.Resources.cancel;
+            this.cancelBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.cancelBtn.Location = new System.Drawing.Point(411, 0);
             this.cancelBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(115, 66);
             this.cancelBtn.TabIndex = 10;
-            this.cancelBtn.Text = "CANCEL";
             this.cancelBtn.UseVisualStyleBackColor = true;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // numZeroBtn
             // 
+            this.numZeroBtn.BackgroundImage = global::ATM.Properties.Resources.button0;
+            this.numZeroBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.numZeroBtn.Location = new System.Drawing.Point(121, 217);
             this.numZeroBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numZeroBtn.Name = "numZeroBtn";
             this.numZeroBtn.Size = new System.Drawing.Size(115, 66);
             this.numZeroBtn.TabIndex = 9;
-            this.numZeroBtn.Text = "0";
             this.numZeroBtn.UseVisualStyleBackColor = true;
             this.numZeroBtn.Click += new System.EventHandler(this.numZeroBtn_Click);
             // 
             // numNineBtn
             // 
+            this.numNineBtn.BackgroundImage = global::ATM.Properties.Resources.button9;
+            this.numNineBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.numNineBtn.Location = new System.Drawing.Point(243, 144);
             this.numNineBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numNineBtn.Name = "numNineBtn";
             this.numNineBtn.Size = new System.Drawing.Size(115, 66);
             this.numNineBtn.TabIndex = 8;
-            this.numNineBtn.Text = "9";
             this.numNineBtn.UseVisualStyleBackColor = true;
             this.numNineBtn.Click += new System.EventHandler(this.numNineBtn_Click);
             // 
             // numEightBtn
             // 
+            this.numEightBtn.BackgroundImage = global::ATM.Properties.Resources.button8;
+            this.numEightBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.numEightBtn.Location = new System.Drawing.Point(121, 144);
             this.numEightBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numEightBtn.Name = "numEightBtn";
             this.numEightBtn.Size = new System.Drawing.Size(115, 66);
             this.numEightBtn.TabIndex = 7;
-            this.numEightBtn.Text = "8";
             this.numEightBtn.UseVisualStyleBackColor = true;
             this.numEightBtn.Click += new System.EventHandler(this.numEightBtn_Click);
             // 
             // numSevenBtn
             // 
+            this.numSevenBtn.BackgroundImage = global::ATM.Properties.Resources.button7;
+            this.numSevenBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.numSevenBtn.Location = new System.Drawing.Point(0, 144);
             this.numSevenBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numSevenBtn.Name = "numSevenBtn";
             this.numSevenBtn.Size = new System.Drawing.Size(115, 66);
             this.numSevenBtn.TabIndex = 6;
-            this.numSevenBtn.Text = "7";
             this.numSevenBtn.UseVisualStyleBackColor = true;
             this.numSevenBtn.Click += new System.EventHandler(this.numSevenBtn_Click);
             // 
             // numSixBtn
             // 
+            this.numSixBtn.BackgroundImage = global::ATM.Properties.Resources.button6;
+            this.numSixBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.numSixBtn.Location = new System.Drawing.Point(243, 71);
             this.numSixBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numSixBtn.Name = "numSixBtn";
             this.numSixBtn.Size = new System.Drawing.Size(115, 66);
             this.numSixBtn.TabIndex = 5;
-            this.numSixBtn.Text = "6";
             this.numSixBtn.UseVisualStyleBackColor = true;
             this.numSixBtn.Click += new System.EventHandler(this.numSixBtn_Click);
             // 
             // numFiveBtn
             // 
+            this.numFiveBtn.BackgroundImage = global::ATM.Properties.Resources.button5;
+            this.numFiveBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.numFiveBtn.Location = new System.Drawing.Point(121, 71);
             this.numFiveBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numFiveBtn.Name = "numFiveBtn";
             this.numFiveBtn.Size = new System.Drawing.Size(115, 66);
             this.numFiveBtn.TabIndex = 4;
-            this.numFiveBtn.Text = "5";
             this.numFiveBtn.UseVisualStyleBackColor = true;
             this.numFiveBtn.Click += new System.EventHandler(this.numFiveBtn_Click);
             // 
             // numFourBtn
             // 
+            this.numFourBtn.BackgroundImage = global::ATM.Properties.Resources.button4;
+            this.numFourBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.numFourBtn.Location = new System.Drawing.Point(0, 71);
             this.numFourBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numFourBtn.Name = "numFourBtn";
             this.numFourBtn.Size = new System.Drawing.Size(115, 66);
             this.numFourBtn.TabIndex = 3;
-            this.numFourBtn.Text = "4";
             this.numFourBtn.UseVisualStyleBackColor = true;
             this.numFourBtn.Click += new System.EventHandler(this.numFourBtn_Click);
             // 
             // numThreeBtn
             // 
+            this.numThreeBtn.BackgroundImage = global::ATM.Properties.Resources.button3;
+            this.numThreeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.numThreeBtn.Location = new System.Drawing.Point(243, 0);
             this.numThreeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numThreeBtn.Name = "numThreeBtn";
             this.numThreeBtn.Size = new System.Drawing.Size(115, 66);
             this.numThreeBtn.TabIndex = 2;
-            this.numThreeBtn.Text = "3";
             this.numThreeBtn.UseVisualStyleBackColor = true;
             this.numThreeBtn.Click += new System.EventHandler(this.numThreeBtn_Click);
             // 
             // numTwoBtn
             // 
+            this.numTwoBtn.BackgroundImage = global::ATM.Properties.Resources.button2;
+            this.numTwoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.numTwoBtn.Location = new System.Drawing.Point(121, 0);
             this.numTwoBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numTwoBtn.Name = "numTwoBtn";
             this.numTwoBtn.Size = new System.Drawing.Size(115, 66);
             this.numTwoBtn.TabIndex = 1;
-            this.numTwoBtn.Text = "2";
             this.numTwoBtn.UseVisualStyleBackColor = true;
             this.numTwoBtn.Click += new System.EventHandler(this.numTwoBtn_Click);
             // 
             // numOneBtn
             // 
+            this.numOneBtn.BackgroundImage = global::ATM.Properties.Resources.button1;
+            this.numOneBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.numOneBtn.Location = new System.Drawing.Point(0, 0);
             this.numOneBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numOneBtn.Name = "numOneBtn";
             this.numOneBtn.Size = new System.Drawing.Size(115, 66);
             this.numOneBtn.TabIndex = 0;
-            this.numOneBtn.Text = "1";
             this.numOneBtn.UseVisualStyleBackColor = true;
             this.numOneBtn.Click += new System.EventHandler(this.numOneBtn_Click);
             // 
