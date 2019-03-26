@@ -112,6 +112,7 @@
             this.enterBtn.Name = "enterBtn";
             this.enterBtn.Size = new System.Drawing.Size(86, 54);
             this.enterBtn.TabIndex = 12;
+            this.enterBtn.Text = "ENTER";
             this.enterBtn.UseVisualStyleBackColor = true;
             this.enterBtn.Click += new System.EventHandler(this.enterBtn_Click);
             // 
@@ -129,6 +130,7 @@
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(86, 54);
             this.clearBtn.TabIndex = 11;
+            this.clearBtn.Text = "CLEAR";
             this.clearBtn.UseVisualStyleBackColor = true;
             this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
@@ -146,6 +148,7 @@
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(86, 54);
             this.cancelBtn.TabIndex = 10;
+            this.cancelBtn.Text = "CANCEL";
             this.cancelBtn.UseVisualStyleBackColor = true;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
@@ -163,6 +166,7 @@
             this.numZeroBtn.Name = "numZeroBtn";
             this.numZeroBtn.Size = new System.Drawing.Size(86, 54);
             this.numZeroBtn.TabIndex = 9;
+            this.numZeroBtn.Text = "0";
             this.numZeroBtn.UseVisualStyleBackColor = true;
             this.numZeroBtn.Click += new System.EventHandler(this.numZeroBtn_Click);
             // 
@@ -180,6 +184,7 @@
             this.numNineBtn.Name = "numNineBtn";
             this.numNineBtn.Size = new System.Drawing.Size(86, 54);
             this.numNineBtn.TabIndex = 8;
+            this.numNineBtn.Text = "9";
             this.numNineBtn.UseVisualStyleBackColor = true;
             this.numNineBtn.Click += new System.EventHandler(this.numNineBtn_Click);
             // 
@@ -197,6 +202,7 @@
             this.numEightBtn.Name = "numEightBtn";
             this.numEightBtn.Size = new System.Drawing.Size(86, 54);
             this.numEightBtn.TabIndex = 7;
+            this.numEightBtn.Text = "8";
             this.numEightBtn.UseVisualStyleBackColor = true;
             this.numEightBtn.Click += new System.EventHandler(this.numEightBtn_Click);
             // 
@@ -214,6 +220,7 @@
             this.numSevenBtn.Name = "numSevenBtn";
             this.numSevenBtn.Size = new System.Drawing.Size(86, 54);
             this.numSevenBtn.TabIndex = 6;
+            this.numSevenBtn.Text = "7";
             this.numSevenBtn.UseVisualStyleBackColor = true;
             this.numSevenBtn.Click += new System.EventHandler(this.numSevenBtn_Click);
             // 
@@ -231,6 +238,7 @@
             this.numSixBtn.Name = "numSixBtn";
             this.numSixBtn.Size = new System.Drawing.Size(86, 54);
             this.numSixBtn.TabIndex = 5;
+            this.numSixBtn.Text = "6";
             this.numSixBtn.UseVisualStyleBackColor = true;
             this.numSixBtn.Click += new System.EventHandler(this.numSixBtn_Click);
             // 
@@ -248,6 +256,7 @@
             this.numFiveBtn.Name = "numFiveBtn";
             this.numFiveBtn.Size = new System.Drawing.Size(86, 54);
             this.numFiveBtn.TabIndex = 4;
+            this.numFiveBtn.Text = "5";
             this.numFiveBtn.UseVisualStyleBackColor = true;
             this.numFiveBtn.Click += new System.EventHandler(this.numFiveBtn_Click);
             // 
@@ -265,6 +274,7 @@
             this.numFourBtn.Name = "numFourBtn";
             this.numFourBtn.Size = new System.Drawing.Size(86, 54);
             this.numFourBtn.TabIndex = 3;
+            this.numFourBtn.Text = "4";
             this.numFourBtn.UseVisualStyleBackColor = true;
             this.numFourBtn.Click += new System.EventHandler(this.numFourBtn_Click);
             // 
@@ -282,6 +292,7 @@
             this.numThreeBtn.Name = "numThreeBtn";
             this.numThreeBtn.Size = new System.Drawing.Size(86, 54);
             this.numThreeBtn.TabIndex = 2;
+            this.numThreeBtn.Text = "3";
             this.numThreeBtn.UseVisualStyleBackColor = true;
             this.numThreeBtn.Click += new System.EventHandler(this.numThreeBtn_Click);
             // 
@@ -299,6 +310,7 @@
             this.numTwoBtn.Name = "numTwoBtn";
             this.numTwoBtn.Size = new System.Drawing.Size(86, 54);
             this.numTwoBtn.TabIndex = 1;
+            this.numTwoBtn.Text = "2";
             this.numTwoBtn.UseVisualStyleBackColor = true;
             this.numTwoBtn.Click += new System.EventHandler(this.numTwoBtn_Click);
             // 
@@ -311,6 +323,7 @@
             this.numOneBtn.Name = "numOneBtn";
             this.numOneBtn.Size = new System.Drawing.Size(86, 54);
             this.numOneBtn.TabIndex = 0;
+            this.numOneBtn.Text = "1";
             this.numOneBtn.UseVisualStyleBackColor = true;
             this.numOneBtn.Click += new System.EventHandler(this.numOneBtn_Click);
             // 
