@@ -62,6 +62,7 @@
             // 
             // instructionsLbl
             // 
+            this.instructionsLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.instructionsLbl.AutoSize = true;
             this.instructionsLbl.BackColor = System.Drawing.Color.Transparent;
             this.instructionsLbl.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -76,7 +77,7 @@
             // accountNumTextbox
             // 
             this.accountNumTextbox.Location = new System.Drawing.Point(201, 100);
-            this.accountNumTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.accountNumTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.accountNumTextbox.MaxLength = 6;
             this.accountNumTextbox.Name = "accountNumTextbox";
             this.accountNumTextbox.Size = new System.Drawing.Size(261, 20);
@@ -99,7 +100,7 @@
             this.panel1.Controls.Add(this.numTwoBtn);
             this.panel1.Controls.Add(this.numOneBtn);
             this.panel1.Location = new System.Drawing.Point(151, 328);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(396, 231);
             this.panel1.TabIndex = 3;
@@ -109,7 +110,7 @@
             this.enterBtn.BackgroundImage = global::ATM.Properties.Resources.enter;
             this.enterBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.enterBtn.Location = new System.Drawing.Point(308, 117);
-            this.enterBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.enterBtn.Margin = new System.Windows.Forms.Padding(2);
             this.enterBtn.Name = "enterBtn";
             this.enterBtn.Size = new System.Drawing.Size(86, 54);
             this.enterBtn.TabIndex = 12;
@@ -121,7 +122,7 @@
             this.clearBtn.BackgroundImage = global::ATM.Properties.Resources.clear;
             this.clearBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.clearBtn.Location = new System.Drawing.Point(308, 58);
-            this.clearBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.clearBtn.Margin = new System.Windows.Forms.Padding(2);
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(86, 54);
             this.clearBtn.TabIndex = 11;
@@ -133,7 +134,7 @@
             this.cancelBtn.BackgroundImage = global::ATM.Properties.Resources.cancel;
             this.cancelBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.cancelBtn.Location = new System.Drawing.Point(308, 0);
-            this.cancelBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cancelBtn.Margin = new System.Windows.Forms.Padding(2);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(86, 54);
             this.cancelBtn.TabIndex = 10;
@@ -145,7 +146,7 @@
             this.numZeroBtn.BackgroundImage = global::ATM.Properties.Resources.button0;
             this.numZeroBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.numZeroBtn.Location = new System.Drawing.Point(91, 176);
-            this.numZeroBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numZeroBtn.Margin = new System.Windows.Forms.Padding(2);
             this.numZeroBtn.Name = "numZeroBtn";
             this.numZeroBtn.Size = new System.Drawing.Size(86, 54);
             this.numZeroBtn.TabIndex = 9;
@@ -157,7 +158,7 @@
             this.numNineBtn.BackgroundImage = global::ATM.Properties.Resources.button9;
             this.numNineBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.numNineBtn.Location = new System.Drawing.Point(182, 117);
-            this.numNineBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numNineBtn.Margin = new System.Windows.Forms.Padding(2);
             this.numNineBtn.Name = "numNineBtn";
             this.numNineBtn.Size = new System.Drawing.Size(86, 54);
             this.numNineBtn.TabIndex = 8;
@@ -169,7 +170,7 @@
             this.numEightBtn.BackgroundImage = global::ATM.Properties.Resources.button8;
             this.numEightBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.numEightBtn.Location = new System.Drawing.Point(91, 117);
-            this.numEightBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numEightBtn.Margin = new System.Windows.Forms.Padding(2);
             this.numEightBtn.Name = "numEightBtn";
             this.numEightBtn.Size = new System.Drawing.Size(86, 54);
             this.numEightBtn.TabIndex = 7;
@@ -181,7 +182,7 @@
             this.numSevenBtn.BackgroundImage = global::ATM.Properties.Resources.button7;
             this.numSevenBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.numSevenBtn.Location = new System.Drawing.Point(0, 117);
-            this.numSevenBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSevenBtn.Margin = new System.Windows.Forms.Padding(2);
             this.numSevenBtn.Name = "numSevenBtn";
             this.numSevenBtn.Size = new System.Drawing.Size(86, 54);
             this.numSevenBtn.TabIndex = 6;
@@ -193,7 +194,7 @@
             this.numSixBtn.BackgroundImage = global::ATM.Properties.Resources.button6;
             this.numSixBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.numSixBtn.Location = new System.Drawing.Point(182, 58);
-            this.numSixBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSixBtn.Margin = new System.Windows.Forms.Padding(2);
             this.numSixBtn.Name = "numSixBtn";
             this.numSixBtn.Size = new System.Drawing.Size(86, 54);
             this.numSixBtn.TabIndex = 5;
@@ -205,7 +206,7 @@
             this.numFiveBtn.BackgroundImage = global::ATM.Properties.Resources.button5;
             this.numFiveBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.numFiveBtn.Location = new System.Drawing.Point(91, 58);
-            this.numFiveBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numFiveBtn.Margin = new System.Windows.Forms.Padding(2);
             this.numFiveBtn.Name = "numFiveBtn";
             this.numFiveBtn.Size = new System.Drawing.Size(86, 54);
             this.numFiveBtn.TabIndex = 4;
@@ -217,7 +218,7 @@
             this.numFourBtn.BackgroundImage = global::ATM.Properties.Resources.button4;
             this.numFourBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.numFourBtn.Location = new System.Drawing.Point(0, 58);
-            this.numFourBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numFourBtn.Margin = new System.Windows.Forms.Padding(2);
             this.numFourBtn.Name = "numFourBtn";
             this.numFourBtn.Size = new System.Drawing.Size(86, 54);
             this.numFourBtn.TabIndex = 3;
@@ -229,7 +230,7 @@
             this.numThreeBtn.BackgroundImage = global::ATM.Properties.Resources.button3;
             this.numThreeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.numThreeBtn.Location = new System.Drawing.Point(182, 0);
-            this.numThreeBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numThreeBtn.Margin = new System.Windows.Forms.Padding(2);
             this.numThreeBtn.Name = "numThreeBtn";
             this.numThreeBtn.Size = new System.Drawing.Size(86, 54);
             this.numThreeBtn.TabIndex = 2;
@@ -241,7 +242,7 @@
             this.numTwoBtn.BackgroundImage = global::ATM.Properties.Resources.button2;
             this.numTwoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.numTwoBtn.Location = new System.Drawing.Point(91, 0);
-            this.numTwoBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTwoBtn.Margin = new System.Windows.Forms.Padding(2);
             this.numTwoBtn.Name = "numTwoBtn";
             this.numTwoBtn.Size = new System.Drawing.Size(86, 54);
             this.numTwoBtn.TabIndex = 1;
@@ -253,7 +254,7 @@
             this.numOneBtn.BackgroundImage = global::ATM.Properties.Resources.button1;
             this.numOneBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.numOneBtn.Location = new System.Drawing.Point(0, 0);
-            this.numOneBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numOneBtn.Margin = new System.Windows.Forms.Padding(2);
             this.numOneBtn.Name = "numOneBtn";
             this.numOneBtn.Size = new System.Drawing.Size(86, 54);
             this.numOneBtn.TabIndex = 0;
@@ -278,7 +279,7 @@
             // 
             this.option1Lbl.AutoSize = true;
             this.option1Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.option1Lbl.Location = new System.Drawing.Point(134, 102);
+            this.option1Lbl.Location = new System.Drawing.Point(123, 96);
             this.option1Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.option1Lbl.Name = "option1Lbl";
             this.option1Lbl.Size = new System.Drawing.Size(35, 13);
@@ -289,7 +290,7 @@
             // 
             this.option2Lbl.AutoSize = true;
             this.option2Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.option2Lbl.Location = new System.Drawing.Point(138, 180);
+            this.option2Lbl.Location = new System.Drawing.Point(123, 174);
             this.option2Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.option2Lbl.Name = "option2Lbl";
             this.option2Lbl.Size = new System.Drawing.Size(35, 13);
@@ -300,7 +301,7 @@
             // 
             this.option3Lbl.AutoSize = true;
             this.option3Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.option3Lbl.Location = new System.Drawing.Point(140, 258);
+            this.option3Lbl.Location = new System.Drawing.Point(123, 252);
             this.option3Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.option3Lbl.Name = "option3Lbl";
             this.option3Lbl.Size = new System.Drawing.Size(35, 13);
@@ -311,41 +312,48 @@
             // 
             this.option4Lbl.AutoSize = true;
             this.option4Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.option4Lbl.Location = new System.Drawing.Point(530, 100);
+            this.option4Lbl.Location = new System.Drawing.Point(530, 96);
             this.option4Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.option4Lbl.Name = "option4Lbl";
+            this.option4Lbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.option4Lbl.Size = new System.Drawing.Size(35, 13);
             this.option4Lbl.TabIndex = 9;
             this.option4Lbl.Text = "label4";
+            this.option4Lbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // option5Lbl
             // 
             this.option5Lbl.AutoSize = true;
             this.option5Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.option5Lbl.Location = new System.Drawing.Point(530, 180);
+            this.option5Lbl.Location = new System.Drawing.Point(530, 174);
             this.option5Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.option5Lbl.Name = "option5Lbl";
+            this.option5Lbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.option5Lbl.Size = new System.Drawing.Size(35, 13);
             this.option5Lbl.TabIndex = 10;
             this.option5Lbl.Text = "label5";
+            this.option5Lbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // option6Lbl
             // 
+            this.option6Lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.option6Lbl.AutoSize = true;
             this.option6Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.option6Lbl.Location = new System.Drawing.Point(530, 258);
+            this.option6Lbl.Location = new System.Drawing.Point(530, 252);
             this.option6Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.option6Lbl.Name = "option6Lbl";
+            this.option6Lbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.option6Lbl.Size = new System.Drawing.Size(35, 13);
             this.option6Lbl.TabIndex = 11;
             this.option6Lbl.Text = "label6";
+            this.option6Lbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // option1Btn
             // 
             this.option1Btn.BackColor = System.Drawing.Color.Transparent;
             this.option1Btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.option1Btn.Location = new System.Drawing.Point(8, 76);
-            this.option1Btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.option1Btn.Margin = new System.Windows.Forms.Padding(2);
             this.option1Btn.Name = "option1Btn";
             this.option1Btn.Size = new System.Drawing.Size(98, 53);
             this.option1Btn.TabIndex = 12;
@@ -357,7 +365,7 @@
             this.option2Btn.BackColor = System.Drawing.Color.Transparent;
             this.option2Btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.option2Btn.Location = new System.Drawing.Point(8, 154);
-            this.option2Btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.option2Btn.Margin = new System.Windows.Forms.Padding(2);
             this.option2Btn.Name = "option2Btn";
             this.option2Btn.Size = new System.Drawing.Size(98, 53);
             this.option2Btn.TabIndex = 13;
@@ -369,33 +377,36 @@
             this.option3Btn.BackColor = System.Drawing.Color.Transparent;
             this.option3Btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.option3Btn.Location = new System.Drawing.Point(8, 232);
-            this.option3Btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.option3Btn.Margin = new System.Windows.Forms.Padding(2);
             this.option3Btn.Name = "option3Btn";
             this.option3Btn.Size = new System.Drawing.Size(98, 53);
             this.option3Btn.TabIndex = 14;
             this.option3Btn.UseVisualStyleBackColor = false;
+            this.option3Btn.Click += new System.EventHandler(this.option3Btn_Click_1);
             // 
             // option4Btn
             // 
             this.option4Btn.BackColor = System.Drawing.Color.Transparent;
             this.option4Btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.option4Btn.Location = new System.Drawing.Point(586, 76);
-            this.option4Btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.option4Btn.Margin = new System.Windows.Forms.Padding(2);
             this.option4Btn.Name = "option4Btn";
             this.option4Btn.Size = new System.Drawing.Size(98, 53);
             this.option4Btn.TabIndex = 15;
             this.option4Btn.UseVisualStyleBackColor = false;
+            this.option4Btn.Click += new System.EventHandler(this.option4Btn_Click_1);
             // 
             // option5Btn
             // 
             this.option5Btn.BackColor = System.Drawing.Color.Transparent;
             this.option5Btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.option5Btn.Location = new System.Drawing.Point(586, 154);
-            this.option5Btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.option5Btn.Margin = new System.Windows.Forms.Padding(2);
             this.option5Btn.Name = "option5Btn";
             this.option5Btn.Size = new System.Drawing.Size(98, 53);
             this.option5Btn.TabIndex = 16;
             this.option5Btn.UseVisualStyleBackColor = false;
+            this.option5Btn.Click += new System.EventHandler(this.option5Btn_Click_1);
             // 
             // option6Btn
             // 
@@ -403,11 +414,12 @@
             this.option6Btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.option6Btn.ForeColor = System.Drawing.Color.Transparent;
             this.option6Btn.Location = new System.Drawing.Point(586, 232);
-            this.option6Btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.option6Btn.Margin = new System.Windows.Forms.Padding(2);
             this.option6Btn.Name = "option6Btn";
             this.option6Btn.Size = new System.Drawing.Size(98, 53);
             this.option6Btn.TabIndex = 17;
             this.option6Btn.UseVisualStyleBackColor = false;
+            this.option6Btn.Click += new System.EventHandler(this.option6Btn_Click_1);
             // 
             // ATM
             // 
@@ -432,7 +444,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.accountNumTextbox);
             this.Controls.Add(this.instructionsLbl);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ATM";
             this.Text = "ATM";
             this.Load += new System.EventHandler(this.ATM_Load);
