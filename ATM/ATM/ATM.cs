@@ -100,10 +100,10 @@ namespace ATM
             if (accountNumTextbox.Text.Length < accountNumTextbox.MaxLength) accountNumTextbox.Text = accountNumTextbox.Text + "0";
         }
 
-
+        //Closes the current ATM
         private void cancelBtn_Click(object sender, EventArgs e)
         {
-            accountNumTextbox.Text = "";
+            this.Close();
         }
 
         private void display()
