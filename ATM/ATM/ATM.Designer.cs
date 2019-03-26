@@ -100,15 +100,8 @@
             // 
             // enterBtn
             // 
-<<<<<<< HEAD
             this.enterBtn.Location = new System.Drawing.Point(308, 117);
             this.enterBtn.Margin = new System.Windows.Forms.Padding(2);
-=======
-            this.enterBtn.BackgroundImage = global::ATM.Properties.Resources.enter1;
-            this.enterBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.enterBtn.Location = new System.Drawing.Point(411, 144);
-            this.enterBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> b72a55c62deeb00d886cbc11bed9a3c79e53b37e
             this.enterBtn.Name = "enterBtn";
             this.enterBtn.Size = new System.Drawing.Size(86, 54);
             this.enterBtn.TabIndex = 12;
@@ -118,15 +111,8 @@
             // 
             // clearBtn
             // 
-<<<<<<< HEAD
             this.clearBtn.Location = new System.Drawing.Point(308, 58);
             this.clearBtn.Margin = new System.Windows.Forms.Padding(2);
-=======
-            this.clearBtn.BackgroundImage = global::ATM.Properties.Resources.clear;
-            this.clearBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.clearBtn.Location = new System.Drawing.Point(411, 71);
-            this.clearBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> b72a55c62deeb00d886cbc11bed9a3c79e53b37e
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(86, 54);
             this.clearBtn.TabIndex = 11;
@@ -136,15 +122,8 @@
             // 
             // cancelBtn
             // 
-<<<<<<< HEAD
             this.cancelBtn.Location = new System.Drawing.Point(308, 0);
             this.cancelBtn.Margin = new System.Windows.Forms.Padding(2);
-=======
-            this.cancelBtn.BackgroundImage = global::ATM.Properties.Resources.cancel1;
-            this.cancelBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cancelBtn.Location = new System.Drawing.Point(411, 0);
-            this.cancelBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> b72a55c62deeb00d886cbc11bed9a3c79e53b37e
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(86, 54);
             this.cancelBtn.TabIndex = 10;
@@ -154,15 +133,8 @@
             // 
             // numZeroBtn
             // 
-<<<<<<< HEAD
             this.numZeroBtn.Location = new System.Drawing.Point(91, 176);
             this.numZeroBtn.Margin = new System.Windows.Forms.Padding(2);
-=======
-            this.numZeroBtn.BackgroundImage = global::ATM.Properties.Resources.button0;
-            this.numZeroBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.numZeroBtn.Location = new System.Drawing.Point(121, 217);
-            this.numZeroBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> b72a55c62deeb00d886cbc11bed9a3c79e53b37e
             this.numZeroBtn.Name = "numZeroBtn";
             this.numZeroBtn.Size = new System.Drawing.Size(86, 54);
             this.numZeroBtn.TabIndex = 9;
@@ -172,15 +144,8 @@
             // 
             // numNineBtn
             // 
-<<<<<<< HEAD
             this.numNineBtn.Location = new System.Drawing.Point(182, 117);
             this.numNineBtn.Margin = new System.Windows.Forms.Padding(2);
-=======
-            this.numNineBtn.BackgroundImage = global::ATM.Properties.Resources.button9;
-            this.numNineBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.numNineBtn.Location = new System.Drawing.Point(243, 144);
-            this.numNineBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> b72a55c62deeb00d886cbc11bed9a3c79e53b37e
             this.numNineBtn.Name = "numNineBtn";
             this.numNineBtn.Size = new System.Drawing.Size(86, 54);
             this.numNineBtn.TabIndex = 8;
@@ -190,15 +155,8 @@
             // 
             // numEightBtn
             // 
-<<<<<<< HEAD
             this.numEightBtn.Location = new System.Drawing.Point(91, 117);
             this.numEightBtn.Margin = new System.Windows.Forms.Padding(2);
-=======
-            this.numEightBtn.BackgroundImage = global::ATM.Properties.Resources.button8;
-            this.numEightBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.numEightBtn.Location = new System.Drawing.Point(121, 144);
-            this.numEightBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> b72a55c62deeb00d886cbc11bed9a3c79e53b37e
             this.numEightBtn.Name = "numEightBtn";
             this.numEightBtn.Size = new System.Drawing.Size(86, 54);
             this.numEightBtn.TabIndex = 7;
@@ -208,15 +166,8 @@
             // 
             // numSevenBtn
             // 
-<<<<<<< HEAD
             this.numSevenBtn.Location = new System.Drawing.Point(0, 117);
             this.numSevenBtn.Margin = new System.Windows.Forms.Padding(2);
-=======
-            this.numSevenBtn.BackgroundImage = global::ATM.Properties.Resources.button7;
-            this.numSevenBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.numSevenBtn.Location = new System.Drawing.Point(0, 144);
-            this.numSevenBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> b72a55c62deeb00d886cbc11bed9a3c79e53b37e
             this.numSevenBtn.Name = "numSevenBtn";
             this.numSevenBtn.Size = new System.Drawing.Size(86, 54);
             this.numSevenBtn.TabIndex = 6;
@@ -226,15 +177,8 @@
             // 
             // numSixBtn
             // 
-<<<<<<< HEAD
             this.numSixBtn.Location = new System.Drawing.Point(182, 58);
             this.numSixBtn.Margin = new System.Windows.Forms.Padding(2);
-=======
-            this.numSixBtn.BackgroundImage = global::ATM.Properties.Resources.button6;
-            this.numSixBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.numSixBtn.Location = new System.Drawing.Point(243, 71);
-            this.numSixBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> b72a55c62deeb00d886cbc11bed9a3c79e53b37e
             this.numSixBtn.Name = "numSixBtn";
             this.numSixBtn.Size = new System.Drawing.Size(86, 54);
             this.numSixBtn.TabIndex = 5;
@@ -244,15 +188,8 @@
             // 
             // numFiveBtn
             // 
-<<<<<<< HEAD
             this.numFiveBtn.Location = new System.Drawing.Point(91, 58);
             this.numFiveBtn.Margin = new System.Windows.Forms.Padding(2);
-=======
-            this.numFiveBtn.BackgroundImage = global::ATM.Properties.Resources.button5;
-            this.numFiveBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.numFiveBtn.Location = new System.Drawing.Point(121, 71);
-            this.numFiveBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> b72a55c62deeb00d886cbc11bed9a3c79e53b37e
             this.numFiveBtn.Name = "numFiveBtn";
             this.numFiveBtn.Size = new System.Drawing.Size(86, 54);
             this.numFiveBtn.TabIndex = 4;
@@ -262,15 +199,8 @@
             // 
             // numFourBtn
             // 
-<<<<<<< HEAD
             this.numFourBtn.Location = new System.Drawing.Point(0, 58);
             this.numFourBtn.Margin = new System.Windows.Forms.Padding(2);
-=======
-            this.numFourBtn.BackgroundImage = global::ATM.Properties.Resources.button4;
-            this.numFourBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.numFourBtn.Location = new System.Drawing.Point(0, 71);
-            this.numFourBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> b72a55c62deeb00d886cbc11bed9a3c79e53b37e
             this.numFourBtn.Name = "numFourBtn";
             this.numFourBtn.Size = new System.Drawing.Size(86, 54);
             this.numFourBtn.TabIndex = 3;
@@ -280,15 +210,8 @@
             // 
             // numThreeBtn
             // 
-<<<<<<< HEAD
             this.numThreeBtn.Location = new System.Drawing.Point(182, 0);
             this.numThreeBtn.Margin = new System.Windows.Forms.Padding(2);
-=======
-            this.numThreeBtn.BackgroundImage = global::ATM.Properties.Resources.button3;
-            this.numThreeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.numThreeBtn.Location = new System.Drawing.Point(243, 0);
-            this.numThreeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> b72a55c62deeb00d886cbc11bed9a3c79e53b37e
             this.numThreeBtn.Name = "numThreeBtn";
             this.numThreeBtn.Size = new System.Drawing.Size(86, 54);
             this.numThreeBtn.TabIndex = 2;
@@ -298,15 +221,8 @@
             // 
             // numTwoBtn
             // 
-<<<<<<< HEAD
             this.numTwoBtn.Location = new System.Drawing.Point(91, 0);
             this.numTwoBtn.Margin = new System.Windows.Forms.Padding(2);
-=======
-            this.numTwoBtn.BackgroundImage = global::ATM.Properties.Resources.button2;
-            this.numTwoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.numTwoBtn.Location = new System.Drawing.Point(121, 0);
-            this.numTwoBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> b72a55c62deeb00d886cbc11bed9a3c79e53b37e
             this.numTwoBtn.Name = "numTwoBtn";
             this.numTwoBtn.Size = new System.Drawing.Size(86, 54);
             this.numTwoBtn.TabIndex = 1;
@@ -316,8 +232,6 @@
             // 
             // numOneBtn
             // 
-            this.numOneBtn.BackgroundImage = global::ATM.Properties.Resources.button1;
-            this.numOneBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.numOneBtn.Location = new System.Drawing.Point(0, 0);
             this.numOneBtn.Margin = new System.Windows.Forms.Padding(2);
             this.numOneBtn.Name = "numOneBtn";
