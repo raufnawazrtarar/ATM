@@ -112,6 +112,12 @@ namespace ATM
             {
                 instructionsLbl.Text = "Enter Account Number";
                 wrongInputLbl.Text = "";
+                label1.Text = "";
+                label2.Text = "";
+                label3.Text = "";
+                label4.Text = "";
+                label5.Text = "";
+                label6.Text = "";
                 accountNumTextbox.MaxLength = 6;
             }
             else if (state == 2) // PIN State
@@ -130,9 +136,21 @@ namespace ATM
             {
                 instructionsLbl.Text = "Choose Amount to Withdraw";
                 wrongInputLbl.Text = "";
+                label1.Text = "£10";
+                label2.Text = "£20";
+                label3.Text = "£50";
+                label4.Text = "£100";
+                label5.Text = "£200";
+                label6.Text = "Other";
             }
             else if (state == 5) // Display Balance
             {
+                label1.Text = "";
+                label2.Text = "";
+                label3.Text = "";
+                label4.Text = "";
+                label5.Text = "";
+                label6.Text = "";
                 activeAccount.accessed.WaitOne();
                 instructionsLbl.Text = "Balance is £" + activeAccount.getBalance();
                 activeAccount.accessed.Release();
