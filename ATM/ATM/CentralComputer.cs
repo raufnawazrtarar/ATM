@@ -26,6 +26,7 @@ namespace ATM
 {
     public partial class CentralComputer : Form
     {
+        private static int ATMCount = 0;
         private Account[] ac = new Account[3];
 
         // Constructor
@@ -36,6 +37,7 @@ namespace ATM
             ac[0] = new Account(300, 1111, 111111);
             ac[1] = new Account(750, 2222, 222222);
             ac[2] = new Account(3000, 3333, 333333);
+
         }
 
         // Create an isntance of ATM with a Semaphore
@@ -59,6 +61,8 @@ namespace ATM
         {
             Thread ATM_t = new Thread(RunATMwith);
             ATM_t.Start();
+            ATMCount = ATMCount + 1;
+            openATMsNumLbl.Text = ATMCount.ToString();
         }
 
         // Create an ATM thread without any semaphore
@@ -66,6 +70,8 @@ namespace ATM
         {
             Thread ATM_t = new Thread(RunATMwithout);
             ATM_t.Start();
+            ATMCount = ATMCount + 1;
+            openATMsNumLbl.Text = ATMCount.ToString();
         }
 
         // When the form loads 
