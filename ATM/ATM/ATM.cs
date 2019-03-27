@@ -182,6 +182,7 @@ namespace ATM
 
                 activeAccount.accessed.Release();
                 display();
+                loginTextbox.Text = "";
             }
         } 
 
@@ -196,6 +197,7 @@ namespace ATM
         {
             state = 1;
             display();
+            loginTextbox.Text = "";
             activeAccount = null;
         }
 
@@ -300,7 +302,7 @@ namespace ATM
             }
             else if (state == 5 || state == 7)
             {
-                state = 1;
+                state = 3;
                 display();
             }
         }

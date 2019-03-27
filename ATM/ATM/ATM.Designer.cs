@@ -30,7 +30,7 @@
         {
             this.instructionsLbl = new System.Windows.Forms.Label();
             this.loginTextbox = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.keypadPnl = new System.Windows.Forms.Panel();
             this.enterBtn = new System.Windows.Forms.Button();
             this.clearBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
@@ -57,7 +57,7 @@
             this.option4Btn = new System.Windows.Forms.Button();
             this.option5Btn = new System.Windows.Forms.Button();
             this.option6Btn = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.keypadPnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // instructionsLbl
@@ -82,27 +82,27 @@
             this.loginTextbox.Size = new System.Drawing.Size(347, 22);
             this.loginTextbox.TabIndex = 2;
             // 
-            // panel1
+            // keypadPnl
             // 
-            this.panel1.BackColor = System.Drawing.Color.Silver;
-            this.panel1.Controls.Add(this.enterBtn);
-            this.panel1.Controls.Add(this.clearBtn);
-            this.panel1.Controls.Add(this.cancelBtn);
-            this.panel1.Controls.Add(this.numZeroBtn);
-            this.panel1.Controls.Add(this.numNineBtn);
-            this.panel1.Controls.Add(this.numEightBtn);
-            this.panel1.Controls.Add(this.numSevenBtn);
-            this.panel1.Controls.Add(this.numSixBtn);
-            this.panel1.Controls.Add(this.numFiveBtn);
-            this.panel1.Controls.Add(this.numFourBtn);
-            this.panel1.Controls.Add(this.numThreeBtn);
-            this.panel1.Controls.Add(this.numTwoBtn);
-            this.panel1.Controls.Add(this.numOneBtn);
-            this.panel1.Location = new System.Drawing.Point(201, 404);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(528, 284);
-            this.panel1.TabIndex = 3;
+            this.keypadPnl.BackColor = System.Drawing.Color.Silver;
+            this.keypadPnl.Controls.Add(this.enterBtn);
+            this.keypadPnl.Controls.Add(this.clearBtn);
+            this.keypadPnl.Controls.Add(this.cancelBtn);
+            this.keypadPnl.Controls.Add(this.numZeroBtn);
+            this.keypadPnl.Controls.Add(this.numNineBtn);
+            this.keypadPnl.Controls.Add(this.numEightBtn);
+            this.keypadPnl.Controls.Add(this.numSevenBtn);
+            this.keypadPnl.Controls.Add(this.numSixBtn);
+            this.keypadPnl.Controls.Add(this.numFiveBtn);
+            this.keypadPnl.Controls.Add(this.numFourBtn);
+            this.keypadPnl.Controls.Add(this.numThreeBtn);
+            this.keypadPnl.Controls.Add(this.numTwoBtn);
+            this.keypadPnl.Controls.Add(this.numOneBtn);
+            this.keypadPnl.Location = new System.Drawing.Point(201, 404);
+            this.keypadPnl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.keypadPnl.Name = "keypadPnl";
+            this.keypadPnl.Size = new System.Drawing.Size(528, 284);
+            this.keypadPnl.TabIndex = 3;
             // 
             // enterBtn
             // 
@@ -433,14 +433,14 @@
             this.Controls.Add(this.option2Lbl);
             this.Controls.Add(this.option1Lbl);
             this.Controls.Add(this.wrongInputLbl);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.keypadPnl);
             this.Controls.Add(this.loginTextbox);
             this.Controls.Add(this.instructionsLbl);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ATM";
             this.Text = "ATM";
             this.Load += new System.EventHandler(this.ATM_Load);
-            this.panel1.ResumeLayout(false);
+            this.keypadPnl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,7 +449,7 @@
         #endregion
         private System.Windows.Forms.Label instructionsLbl;
         private System.Windows.Forms.TextBox loginTextbox;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel keypadPnl;
         private System.Windows.Forms.Button enterBtn;
         private System.Windows.Forms.Button clearBtn;
         private System.Windows.Forms.Button cancelBtn;
