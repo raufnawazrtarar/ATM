@@ -108,6 +108,11 @@ namespace ATM
             accessed = new Semaphore(1, 1);
         }
 
+        public void destroyAccount() // Set the account number to -1 so you cannot access the account
+        {
+            accountNum = -1;
+        }
+
         // Getter and setter functions for balance
         public int getBalance()
         {

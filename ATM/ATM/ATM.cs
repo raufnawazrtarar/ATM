@@ -29,6 +29,7 @@ namespace ATM
         private Account activeAccount;
         private int state;
         private bool usingSemaphore;
+        private int incorrectPIN = 0;
 
         // Constructor for ATM
         public ATM(Account[] ac, bool usingSemaphore)
@@ -184,9 +185,11 @@ namespace ATM
                 {
                     state = 3; // Main Menu State
                     display();
+                    incorrectPIN = 0;
                 }
                 else
                 {
+                    incorrectPIN++;
                     wrongInputLbl.Text = "Wrong PIN";
                 }
                 loginTextbox.Text = "";
@@ -202,6 +205,15 @@ namespace ATM
                 if (usingSemaphore) activeAccount.accessed.Release();
                 display();
                 loginTextbox.Text = "";
+            }
+
+            if (incorrectPIN >= 3) // If the PIN is incorrect 3 times deactivate the acoount.
+            {
+                activeAccount.destroyAccount();
+                state = 1;
+                display();
+                incorrectPIN = 0;
+                wrongInputLbl.Text = "PIN wrong 3 times. Account deactivated.";
             }
         } 
 
