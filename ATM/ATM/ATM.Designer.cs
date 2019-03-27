@@ -418,7 +418,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackgroundImage = global::ATM.Properties.Resources.bgImg;
+            this.BackgroundImage = global::ATM.Properties.Resources.backGroundImg1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(923, 688);
             this.Controls.Add(this.option6Btn);
