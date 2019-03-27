@@ -34,7 +34,7 @@
             // 
             // openNewATM
             // 
-            this.openNewATM.Location = new System.Drawing.Point(333, 370);
+            this.openNewATM.Location = new System.Drawing.Point(333, 337);
             this.openNewATM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.openNewATM.Name = "openNewATM";
             this.openNewATM.Size = new System.Drawing.Size(123, 55);
@@ -45,7 +45,8 @@
             // 
             // shutDownBtn
             // 
-            this.shutDownBtn.Location = new System.Drawing.Point(29, 370);
+            this.shutDownBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.shutDownBtn.Location = new System.Drawing.Point(12, 337);
             this.shutDownBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.shutDownBtn.Name = "shutDownBtn";
             this.shutDownBtn.Size = new System.Drawing.Size(123, 55);
@@ -58,6 +59,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackgroundImage = global::ATM.Properties.Resources.Logo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(468, 450);
@@ -65,6 +67,8 @@
             this.Controls.Add(this.openNewATM);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CentralComputer";
             this.Text = "Central Computer";
             this.Load += new System.EventHandler(this.CentralComputer_Load);

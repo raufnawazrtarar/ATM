@@ -417,6 +417,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::ATM.Properties.Resources.bgImg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(923, 688);
@@ -437,6 +438,8 @@
             this.Controls.Add(this.loginTextbox);
             this.Controls.Add(this.instructionsLbl);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ATM";
             this.Text = "ATM";
             this.Load += new System.EventHandler(this.ATM_Load);
