@@ -15,13 +15,15 @@ namespace ATM
         private Account[] ac;
         private Account activeAccount;
         private int state;
+        private bool usingSemaphore;
 
         // Constructor for ATM
-        public ATM(Account[] ac)
+        public ATM(Account[] ac, bool usingSemaphore)
         {
             InitializeComponent();
             this.ac = ac;
             state = 1;
+            this.usingSemaphore = usingSemaphore;
         }
 
         // Function upon loading form
@@ -29,6 +31,8 @@ namespace ATM
         {
             display();
         }
+
+
 
         // Return the account with the corresponding account number
         private Account findAccount(int accountNumber)
@@ -99,9 +103,9 @@ namespace ATM
             }
             else if (state == 5) // Display Balance
             {
-                activeAccount.accessed.WaitOne();
+                if (usingSemaphore) activeAccount.accessed.WaitOne();
                 instructionsLbl.Text = "Balance is £" + activeAccount.getBalance();
-                activeAccount.accessed.Release();
+                if (usingSemaphore) activeAccount.accessed.Release();
                 wrongInputLbl.Text = "";
                 option1Lbl.Text = "";
                 option2Lbl.Text = "";
@@ -136,6 +140,8 @@ namespace ATM
                 loginTextbox.Visible = false;
             }
         }
+
+
 
         // When green enter button is pressed
         private void enterBtn_Click(object sender, EventArgs e)
@@ -174,13 +180,13 @@ namespace ATM
             }
             else if (state == 6) // Choose Amount State
             {
-                activeAccount.accessed.WaitOne();
+                if (usingSemaphore) activeAccount.accessed.WaitOne();
                 if (activeAccount.decrementBalance(Int32.Parse(loginTextbox.Text)))
                     state = 5;
                 else
                     state = 7;
 
-                activeAccount.accessed.Release();
+                if (usingSemaphore) activeAccount.accessed.Release();
                 display();
                 loginTextbox.Text = "";
             }
@@ -201,6 +207,8 @@ namespace ATM
             activeAccount = null;
         }
 
+
+
         // When option 1 button is pressed
         private void option1Btn_Click(object sender, EventArgs e)
         {
@@ -211,13 +219,13 @@ namespace ATM
             }
             else if (state == 4)
             {
-                activeAccount.accessed.WaitOne();
+                if (usingSemaphore) activeAccount.accessed.WaitOne();
                 if (activeAccount.decrementBalance(10))
                     state = 5;
                 else
                     state = 7;
 
-                activeAccount.accessed.Release();
+                if (usingSemaphore) activeAccount.accessed.Release();
                 display();
             }
         }
@@ -232,14 +240,14 @@ namespace ATM
             }
             else if (state == 4)
             {
-                activeAccount.accessed.WaitOne();
+                if (usingSemaphore) activeAccount.accessed.WaitOne();
 
                 if (activeAccount.decrementBalance(20))
                     state = 5;
                 else
                     state = 7;
 
-                activeAccount.accessed.Release();
+                if (usingSemaphore) activeAccount.accessed.Release();
                 display();
             }
         }
@@ -249,13 +257,13 @@ namespace ATM
         {
             if (state == 4)
             {
-                activeAccount.accessed.WaitOne();
+                if (usingSemaphore) activeAccount.accessed.WaitOne();
                 if (activeAccount.decrementBalance(50))
                     state = 5;
                 else
                     state = 7;
 
-                activeAccount.accessed.Release();
+                if (usingSemaphore) activeAccount.accessed.Release();
                 display();
             }
         }
@@ -265,13 +273,13 @@ namespace ATM
         {
             if (state == 4)
             {
-                activeAccount.accessed.WaitOne();
+                if (usingSemaphore) activeAccount.accessed.WaitOne();
                 if (activeAccount.decrementBalance(100))
                     state = 5;
                 else
                     state = 7;
 
-                activeAccount.accessed.Release();
+                if (usingSemaphore) activeAccount.accessed.Release();
                 display();
             }
         }
@@ -281,13 +289,13 @@ namespace ATM
         {
             if (state == 4)
             {
-                activeAccount.accessed.WaitOne();
+                if (usingSemaphore) activeAccount.accessed.WaitOne();
                 if (activeAccount.decrementBalance(200))
                     state = 5;
                 else
                     state = 7;
 
-                activeAccount.accessed.Release();
+                if (usingSemaphore) activeAccount.accessed.Release();
                 display();
             }
         }
@@ -306,6 +314,8 @@ namespace ATM
                 display();
             }
         }
+
+
 
         //when button "1" is pressed it adds "1" to the textbox
         private void numOneBtn_Click(object sender, EventArgs e)

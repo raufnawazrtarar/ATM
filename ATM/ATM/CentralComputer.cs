@@ -24,16 +24,23 @@ namespace ATM
             ac[2] = new Account(3000, 3333, 333333);
         }
 
-        public void RunATM()
+        public void RunATMwith()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ATM(ac));
+            Application.Run(new ATM(ac, true));
+        }
+
+        public void RunATMwithout()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new ATM(ac, false));
         }
 
         private void openNewATM_Click(object sender, EventArgs e)
         {
-            Thread ATM_t = new Thread(RunATM);
+            Thread ATM_t = new Thread(RunATMwith);
             ATM_t.Start();
         }
 
@@ -49,6 +56,12 @@ namespace ATM
             {
                 System.Windows.Forms.Application.Exit();
             } 
+        }
+
+        private void openATMwithout_Click(object sender, EventArgs e)
+        {
+            Thread ATM_t = new Thread(RunATMwithout);
+            ATM_t.Start();
         }
     }
 
@@ -90,7 +103,7 @@ namespace ATM
          */
         public Boolean decrementBalance(int amount)
         {
-            if (this.balance > amount)
+            if (this.balance >= amount)
             {
                 balance -= amount;
                 return true;
