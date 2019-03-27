@@ -194,7 +194,7 @@ namespace ATM
             else if (state == 6) // Choose Amount State
             {
                 if (usingSemaphore) activeAccount.accessed.WaitOne();
-                if (activeAccount.decrementBalance(Int32.Parse(loginTextbox.Text)))
+                if (activeAccount.decrementBalance(Int32.Parse(loginTextbox.Text), usingSemaphore))
                     state = 5;
                 else
                     state = 7;
@@ -233,7 +233,7 @@ namespace ATM
             else if (state == 4)
             {
                 if (usingSemaphore) activeAccount.accessed.WaitOne();
-                if (activeAccount.decrementBalance(10))
+                if (activeAccount.decrementBalance(10, usingSemaphore))
                     state = 5;
                 else
                     state = 7;
@@ -255,7 +255,7 @@ namespace ATM
             {
                 if (usingSemaphore) activeAccount.accessed.WaitOne();
 
-                if (activeAccount.decrementBalance(20))
+                if (activeAccount.decrementBalance(20, usingSemaphore))
                     state = 5;
                 else
                     state = 7;
@@ -271,7 +271,7 @@ namespace ATM
             if (state == 4)
             {
                 if (usingSemaphore) activeAccount.accessed.WaitOne();
-                if (activeAccount.decrementBalance(50))
+                if (activeAccount.decrementBalance(50, usingSemaphore))
                     state = 5;
                 else
                     state = 7;
@@ -287,7 +287,7 @@ namespace ATM
             if (state == 4)
             {
                 if (usingSemaphore) activeAccount.accessed.WaitOne();
-                if (activeAccount.decrementBalance(100))
+                if (activeAccount.decrementBalance(100, usingSemaphore))
                     state = 5;
                 else
                     state = 7;
@@ -303,7 +303,7 @@ namespace ATM
             if (state == 4)
             {
                 if (usingSemaphore) activeAccount.accessed.WaitOne();
-                if (activeAccount.decrementBalance(200))
+                if (activeAccount.decrementBalance(200, usingSemaphore))
                     state = 5;
                 else
                     state = 7;

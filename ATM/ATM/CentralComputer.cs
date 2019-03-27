@@ -70,6 +70,7 @@ namespace ATM
         {
             Thread ATM_t = new Thread(RunATMwithout);
             ATM_t.Start();
+            //Adds one to the opened ATMs counter each time a new atm is opened
             ATMCount = ATMCount + 1;
             openATMsNumLbl.Text = ATMCount.ToString();
         }
@@ -118,10 +119,19 @@ namespace ATM
         }
 
         // Remove money from the account
-        public Boolean decrementBalance(int amount)
+        public Boolean decrementBalance(int amount, bool usingSemaphore)
         {
             if (this.balance >= amount)
             {
+                // Code from https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.delay?view=netframework-4.7.2
+                // This will cause a 3 second delay so you can test a data race
+                var t = Task.Run(async delegate
+                {
+                    await Task.Delay(3000);
+                    return 0;
+                });
+                t.Wait();
+
                 balance -= amount;
                 return true;
             }
