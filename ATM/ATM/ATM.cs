@@ -108,7 +108,7 @@ namespace ATM
                 option3Lbl.Text = "";
                 option4Lbl.Text = "";
                 option5Lbl.Text = "";
-                option6Lbl.Text = "Press to Continue";
+                option6Lbl.Text = "Press to\n Continue";
                 accountNumTextbox.Visible = false;
             }
             else if (state == 6) // Choose Amount State
@@ -184,15 +184,15 @@ namespace ATM
         // When yellow clear button is pressed
         private void clearBtn_Click(object sender, EventArgs e)
         {
-            state = 1;
-            display();
-            activeAccount = null;
+            accountNumTextbox.Text = "";
         }
 
         // When cancel button is pressed
         private void cancelBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            state = 1;
+            display();
+            activeAccount = null;
         }
 
         // When option 1 button is pressed

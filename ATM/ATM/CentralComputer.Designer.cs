@@ -29,29 +29,42 @@
         private void InitializeComponent()
         {
             this.openNewATM = new System.Windows.Forms.Button();
+            this.shutDownBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // openNewATM
             // 
-            this.openNewATM.Location = new System.Drawing.Point(22, 301);
-            this.openNewATM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.openNewATM.Location = new System.Drawing.Point(333, 370);
+            this.openNewATM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.openNewATM.Name = "openNewATM";
-            this.openNewATM.Size = new System.Drawing.Size(92, 45);
+            this.openNewATM.Size = new System.Drawing.Size(123, 55);
             this.openNewATM.TabIndex = 0;
             this.openNewATM.Text = "Open New ATM";
             this.openNewATM.UseVisualStyleBackColor = true;
             this.openNewATM.Click += new System.EventHandler(this.openNewATM_Click);
             // 
+            // shutDownBtn
+            // 
+            this.shutDownBtn.Location = new System.Drawing.Point(29, 370);
+            this.shutDownBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.shutDownBtn.Name = "shutDownBtn";
+            this.shutDownBtn.Size = new System.Drawing.Size(123, 55);
+            this.shutDownBtn.TabIndex = 1;
+            this.shutDownBtn.Text = "Shut Down the System";
+            this.shutDownBtn.UseVisualStyleBackColor = true;
+            this.shutDownBtn.Click += new System.EventHandler(this.shutDownBtn_Click);
+            // 
             // CentralComputer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ATM.Properties.Resources.Logo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(351, 366);
+            this.ClientSize = new System.Drawing.Size(468, 450);
+            this.Controls.Add(this.shutDownBtn);
             this.Controls.Add(this.openNewATM);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CentralComputer";
             this.Text = "Central Computer";
             this.Load += new System.EventHandler(this.CentralComputer_Load);
@@ -62,6 +75,7 @@
         #endregion
 
         private System.Windows.Forms.Button openNewATM;
+        private System.Windows.Forms.Button shutDownBtn;
     }
 }
 
