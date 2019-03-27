@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.instructionsLbl = new System.Windows.Forms.Label();
-            this.accountNumTextbox = new System.Windows.Forms.TextBox();
+            this.loginTextbox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.enterBtn = new System.Windows.Forms.Button();
             this.clearBtn = new System.Windows.Forms.Button();
@@ -73,14 +73,14 @@
             this.instructionsLbl.Text = "Please type in your account number";
             this.instructionsLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // accountNumTextbox
+            // loginTextbox
             // 
-            this.accountNumTextbox.Location = new System.Drawing.Point(268, 123);
-            this.accountNumTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.accountNumTextbox.MaxLength = 6;
-            this.accountNumTextbox.Name = "accountNumTextbox";
-            this.accountNumTextbox.Size = new System.Drawing.Size(347, 22);
-            this.accountNumTextbox.TabIndex = 2;
+            this.loginTextbox.Location = new System.Drawing.Point(268, 123);
+            this.loginTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.loginTextbox.MaxLength = 6;
+            this.loginTextbox.Name = "loginTextbox";
+            this.loginTextbox.Size = new System.Drawing.Size(347, 22);
+            this.loginTextbox.TabIndex = 2;
             // 
             // panel1
             // 
@@ -434,7 +434,7 @@
             this.Controls.Add(this.option1Lbl);
             this.Controls.Add(this.wrongInputLbl);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.accountNumTextbox);
+            this.Controls.Add(this.loginTextbox);
             this.Controls.Add(this.instructionsLbl);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ATM";
@@ -448,7 +448,7 @@
 
         #endregion
         private System.Windows.Forms.Label instructionsLbl;
-        private System.Windows.Forms.TextBox accountNumTextbox;
+        private System.Windows.Forms.TextBox loginTextbox;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button enterBtn;
         private System.Windows.Forms.Button clearBtn;

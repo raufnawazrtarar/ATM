@@ -41,11 +41,11 @@ namespace ATM
         {
 
         }
-
+        
+        //Cofirmation box before shutting down the system
         private void shutDownBtn_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to shut down the system. This will close all the ATMs and Central computer", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
-
             {
                 System.Windows.Forms.Application.Exit();
             } 

@@ -56,8 +56,8 @@ namespace ATM
                 option4Lbl.Text = "";
                 option5Lbl.Text = "";
                 option6Lbl.Text = "";
-                accountNumTextbox.Visible = true;
-                accountNumTextbox.MaxLength = 6;
+                loginTextbox.Visible = true;
+                loginTextbox.MaxLength = 6;
             }
             else if (state == 2) // PIN State
             {
@@ -69,8 +69,8 @@ namespace ATM
                 option4Lbl.Text = "";
                 option5Lbl.Text = "";
                 option6Lbl.Text = "";
-                accountNumTextbox.MaxLength = 4;
-                accountNumTextbox.Visible = true;
+                loginTextbox.MaxLength = 4;
+                loginTextbox.Visible = true;
             }
             else if (state == 3) // Display Options
             {
@@ -82,7 +82,7 @@ namespace ATM
                 option4Lbl.Text = "";
                 option5Lbl.Text = "";
                 option6Lbl.Text = "";
-                accountNumTextbox.Visible = false;
+                loginTextbox.Visible = false;
 
             }
             else if (state == 4) // Get Amount to Withdraw
@@ -95,7 +95,7 @@ namespace ATM
                 option4Lbl.Text = "£100";
                 option5Lbl.Text = "£200";
                 option6Lbl.Text = "Other";
-                accountNumTextbox.Visible = false;
+                loginTextbox.Visible = false;
             }
             else if (state == 5) // Display Balance
             {
@@ -109,7 +109,7 @@ namespace ATM
                 option4Lbl.Text = "";
                 option5Lbl.Text = "";
                 option6Lbl.Text = "Press to\n Continue";
-                accountNumTextbox.Visible = false;
+                loginTextbox.Visible = false;
             }
             else if (state == 6) // Choose Amount State
             {
@@ -121,7 +121,7 @@ namespace ATM
                 option4Lbl.Text = "";
                 option5Lbl.Text = "";
                 option6Lbl.Text = "";
-                accountNumTextbox.Visible = true;
+                loginTextbox.Visible = true;
             }
             else if (state == 7) // Display Balance
             {
@@ -132,18 +132,22 @@ namespace ATM
                 option3Lbl.Text = "";
                 option4Lbl.Text = "";
                 option5Lbl.Text = "";
-                option6Lbl.Text = "Press to continue";
-                accountNumTextbox.Visible = false;
+                option6Lbl.Text = "Press to\n continue";
+                loginTextbox.Visible = false;
             }
-        } 
+        }
 
         // When green enter button is pressed
         private void enterBtn_Click(object sender, EventArgs e)
         {
-            if (state == 1) // Account Number State
+            if (loginTextbox.Text == "")
             {
-                activeAccount = findAccount(Int32.Parse(accountNumTextbox.Text));
-                accountNumTextbox.Text = "";
+                wrongInputLbl.Text = "Ivalid input, Please try again";
+            }
+            else if (state == 1) // Account Number State
+            {
+                activeAccount = findAccount(Int32.Parse(loginTextbox.Text));
+                loginTextbox.Text = "";
 
                 if (activeAccount != null) // If account number successful
                 {
@@ -151,13 +155,13 @@ namespace ATM
                     display();
                 }
                 else
-                { 
+                {
                     wrongInputLbl.Text = "Wrong Account Number";
                 }
             }
             else if (state == 2) // PIN State
             {
-                if (activeAccount.checkPin(Int32.Parse(accountNumTextbox.Text))) // If PIN correct
+                if (activeAccount.checkPin(Int32.Parse(loginTextbox.Text))) // If PIN correct
                 {
                     state = 3; // Main Menu State
                     display();
@@ -166,12 +170,12 @@ namespace ATM
                 {
                     wrongInputLbl.Text = "Wrong PIN";
                 }
-                accountNumTextbox.Text = "";
+                loginTextbox.Text = "";
             }
             else if (state == 6) // Choose Amount State
             {
                 activeAccount.accessed.WaitOne();
-                if (activeAccount.decrementBalance(Int32.Parse(accountNumTextbox.Text)))
+                if (activeAccount.decrementBalance(Int32.Parse(loginTextbox.Text)))
                     state = 5;
                 else
                     state = 7;
@@ -179,12 +183,12 @@ namespace ATM
                 activeAccount.accessed.Release();
                 display();
             }
-        }
+        } 
 
         // When yellow clear button is pressed
         private void clearBtn_Click(object sender, EventArgs e)
         {
-            accountNumTextbox.Text = "";
+            loginTextbox.Text = "";
         }
 
         // When cancel button is pressed
@@ -304,61 +308,61 @@ namespace ATM
         //when button "1" is pressed it adds "1" to the textbox
         private void numOneBtn_Click(object sender, EventArgs e)
         {
-            if (accountNumTextbox.Text.Length < accountNumTextbox.MaxLength) accountNumTextbox.Text = accountNumTextbox.Text + "1";
+            if (loginTextbox.Text.Length < loginTextbox.MaxLength) loginTextbox.Text = loginTextbox.Text + "1";
         }
 
         //when button "2" is pressed it adds "2" to the textbox
         private void numTwoBtn_Click(object sender, EventArgs e)
         {
-            if (accountNumTextbox.Text.Length < accountNumTextbox.MaxLength) accountNumTextbox.Text = accountNumTextbox.Text + "2";
+            if (loginTextbox.Text.Length < loginTextbox.MaxLength) loginTextbox.Text = loginTextbox.Text + "2";
         }
 
         //when button "3" is pressed it adds "3" to the textbox
         private void numThreeBtn_Click(object sender, EventArgs e)
         {
-            if (accountNumTextbox.Text.Length < accountNumTextbox.MaxLength) accountNumTextbox.Text = accountNumTextbox.Text + "3";
+            if (loginTextbox.Text.Length < loginTextbox.MaxLength) loginTextbox.Text = loginTextbox.Text + "3";
         }
 
         //when button "4" is pressed it adds "4" to the textbox
         private void numFourBtn_Click(object sender, EventArgs e)
         {
-            if (accountNumTextbox.Text.Length < accountNumTextbox.MaxLength) accountNumTextbox.Text = accountNumTextbox.Text + "4";
+            if (loginTextbox.Text.Length < loginTextbox.MaxLength) loginTextbox.Text = loginTextbox.Text + "4";
         }
 
         //when button "5" is pressed it adds "5" to the textbox
         private void numFiveBtn_Click(object sender, EventArgs e)
         {
-            if (accountNumTextbox.Text.Length < accountNumTextbox.MaxLength) accountNumTextbox.Text = accountNumTextbox.Text + "5";
+            if (loginTextbox.Text.Length < loginTextbox.MaxLength) loginTextbox.Text = loginTextbox.Text + "5";
         }
 
         //when button "6" is pressed it adds "6" to the textbox
         private void numSixBtn_Click(object sender, EventArgs e)
         {
-            if (accountNumTextbox.Text.Length < accountNumTextbox.MaxLength) accountNumTextbox.Text = accountNumTextbox.Text + "6";
+            if (loginTextbox.Text.Length < loginTextbox.MaxLength) loginTextbox.Text = loginTextbox.Text + "6";
         }
 
         //when button "7" is pressed it adds "7" to the textbox
         private void numSevenBtn_Click(object sender, EventArgs e)
         {
-            if (accountNumTextbox.Text.Length < accountNumTextbox.MaxLength) accountNumTextbox.Text = accountNumTextbox.Text + "7";
+            if (loginTextbox.Text.Length < loginTextbox.MaxLength) loginTextbox.Text = loginTextbox.Text + "7";
         }
 
         //when button "8" is pressed it adds "8" to the textbox
         private void numEightBtn_Click(object sender, EventArgs e)
         {
-            if (accountNumTextbox.Text.Length < accountNumTextbox.MaxLength) accountNumTextbox.Text = accountNumTextbox.Text + "8";
+            if (loginTextbox.Text.Length < loginTextbox.MaxLength) loginTextbox.Text = loginTextbox.Text + "8";
         }
 
         //when button "9" is pressed it adds "9" to the textbox
         private void numNineBtn_Click(object sender, EventArgs e)
         {
-            if (accountNumTextbox.Text.Length < accountNumTextbox.MaxLength) accountNumTextbox.Text = accountNumTextbox.Text + "9";
+            if (loginTextbox.Text.Length < loginTextbox.MaxLength) loginTextbox.Text = loginTextbox.Text + "9";
         }
         
         //when button "0" is pressed it adds "0" to the textbox
         private void numZeroBtn_Click(object sender, EventArgs e)
         {
-            if (accountNumTextbox.Text.Length < accountNumTextbox.MaxLength) accountNumTextbox.Text = accountNumTextbox.Text + "0";
+            if (loginTextbox.Text.Length < loginTextbox.MaxLength) loginTextbox.Text = loginTextbox.Text + "0";
         }
     }
 }
