@@ -1,4 +1,17 @@
-﻿using System;
+﻿/**
+ * ATM
+ * CentralComputer form
+ * 
+ * Made by:
+ *  Alexander Arnaudov
+ *  Rauf Nawaz Tarar Sultana
+ *  Archie Rutherford
+ *  
+ *  Some sections of code were from the
+ *  sample code given on my.dundee.ac.uk
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +28,7 @@ namespace ATM
     {
         private Account[] ac = new Account[3];
 
+        // Constructor
         public CentralComputer()
         {
             InitializeComponent();
@@ -24,6 +38,7 @@ namespace ATM
             ac[2] = new Account(3000, 3333, 333333);
         }
 
+        // Create an isntance of ATM with a Semaphore
         public void RunATMwith()
         {
             Application.EnableVisualStyles();
@@ -31,6 +46,7 @@ namespace ATM
             Application.Run(new ATM(ac, true));
         }
 
+        // Create an isnatnce of ATM without a Semaphore
         public void RunATMwithout()
         {
             Application.EnableVisualStyles();
@@ -38,12 +54,21 @@ namespace ATM
             Application.Run(new ATM(ac, false));
         }
 
+        // Create an ATM thread with a Semaphore
         private void openNewATM_Click(object sender, EventArgs e)
         {
             Thread ATM_t = new Thread(RunATMwith);
             ATM_t.Start();
         }
 
+        // Create an ATM thread without any semaphore
+        private void openATMwithout_Click(object sender, EventArgs e)
+        {
+            Thread ATM_t = new Thread(RunATMwithout);
+            ATM_t.Start();
+        }
+
+        // When the form loads 
         private void CentralComputer_Load(object sender, EventArgs e)
         {
 
@@ -57,23 +82,17 @@ namespace ATM
                 System.Windows.Forms.Application.Exit();
             } 
         }
-
-        private void openATMwithout_Click(object sender, EventArgs e)
-        {
-            Thread ATM_t = new Thread(RunATMwithout);
-            ATM_t.Start();
-        }
     }
 
     public class Account
     {
-        //the attributes for the account
+        // The attributes for the account
         private int balance;
         private int pin;
         private int accountNum;
         public Semaphore accessed;
 
-        // a constructor that takes initial values for each of the attributes (balance, pin, accountNumber)
+        // A constructor that takes initial values for each of the attributes (balance, pin, accountNumber)
         public Account(int balance, int pin, int accountNum)
         {
             this.balance = balance;
@@ -82,7 +101,7 @@ namespace ATM
             accessed = new Semaphore(1, 1);
         }
 
-        //getter and setter functions for balance
+        // Getter and setter functions for balance
         public int getBalance()
         {
             return balance;
@@ -92,15 +111,7 @@ namespace ATM
             this.balance = newBalance;
         }
 
-        /*
-         *   This funciton allows us to decrement the balance of an account
-         *   it perfomes a simple check to ensure the balance is greater tha
-         *   the amount being debeted
-         *   
-         *   reurns:
-         *   true if the transactions if possible
-         *   false if there are insufficent funds in the account
-         */
+        // Remove money from the account
         public Boolean decrementBalance(int amount)
         {
             if (this.balance >= amount)
@@ -114,6 +125,7 @@ namespace ATM
             }
         }
         
+        // Checks PIN and returns true if it is correct
         public Boolean checkPin(int pinEntered)
         {
             if (pinEntered == pin)
@@ -122,6 +134,7 @@ namespace ATM
                 return false;
         }
 
+        // Return account number
         public int getAccountNum()
         {
             return accountNum;

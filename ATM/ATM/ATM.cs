@@ -1,4 +1,17 @@
-﻿using System;
+﻿/**
+ * ATM
+ * ATM form
+ * 
+ * Made by:
+ *  Alexander Arnaudov
+ *  Rauf Nawaz Tarar Sultana
+ *  Archie Rutherford
+ *  
+ *  Some sections of code were from the
+ *  sample code given on my.dundee.ac.uk
+ */
+ 
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
