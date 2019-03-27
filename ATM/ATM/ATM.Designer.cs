@@ -277,9 +277,10 @@
             // 
             this.option1Lbl.AutoSize = true;
             this.option1Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.option1Lbl.Font = new System.Drawing.Font("Verdana Pro Cond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.option1Lbl.Location = new System.Drawing.Point(164, 118);
             this.option1Lbl.Name = "option1Lbl";
-            this.option1Lbl.Size = new System.Drawing.Size(46, 17);
+            this.option1Lbl.Size = new System.Drawing.Size(52, 20);
             this.option1Lbl.TabIndex = 6;
             this.option1Lbl.Text = "label1";
             // 
@@ -287,9 +288,10 @@
             // 
             this.option2Lbl.AutoSize = true;
             this.option2Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.option2Lbl.Font = new System.Drawing.Font("Verdana Pro Cond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.option2Lbl.Location = new System.Drawing.Point(164, 214);
             this.option2Lbl.Name = "option2Lbl";
-            this.option2Lbl.Size = new System.Drawing.Size(46, 17);
+            this.option2Lbl.Size = new System.Drawing.Size(52, 20);
             this.option2Lbl.TabIndex = 7;
             this.option2Lbl.Text = "label2";
             // 
@@ -297,9 +299,10 @@
             // 
             this.option3Lbl.AutoSize = true;
             this.option3Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.option3Lbl.Font = new System.Drawing.Font("Verdana Pro Cond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.option3Lbl.Location = new System.Drawing.Point(164, 310);
             this.option3Lbl.Name = "option3Lbl";
-            this.option3Lbl.Size = new System.Drawing.Size(46, 17);
+            this.option3Lbl.Size = new System.Drawing.Size(52, 20);
             this.option3Lbl.TabIndex = 8;
             this.option3Lbl.Text = "label3";
             // 
@@ -307,10 +310,11 @@
             // 
             this.option4Lbl.AutoSize = true;
             this.option4Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.option4Lbl.Location = new System.Drawing.Point(707, 118);
+            this.option4Lbl.Font = new System.Drawing.Font("Verdana Pro Cond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.option4Lbl.Location = new System.Drawing.Point(705, 118);
             this.option4Lbl.Name = "option4Lbl";
             this.option4Lbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.option4Lbl.Size = new System.Drawing.Size(46, 17);
+            this.option4Lbl.Size = new System.Drawing.Size(52, 20);
             this.option4Lbl.TabIndex = 9;
             this.option4Lbl.Text = "label4";
             this.option4Lbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -319,10 +323,11 @@
             // 
             this.option5Lbl.AutoSize = true;
             this.option5Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.option5Lbl.Location = new System.Drawing.Point(707, 214);
+            this.option5Lbl.Font = new System.Drawing.Font("Verdana Pro Cond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.option5Lbl.Location = new System.Drawing.Point(705, 214);
             this.option5Lbl.Name = "option5Lbl";
             this.option5Lbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.option5Lbl.Size = new System.Drawing.Size(46, 17);
+            this.option5Lbl.Size = new System.Drawing.Size(52, 20);
             this.option5Lbl.TabIndex = 10;
             this.option5Lbl.Text = "label5";
             this.option5Lbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -332,10 +337,11 @@
             this.option6Lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.option6Lbl.AutoSize = true;
             this.option6Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.option6Lbl.Location = new System.Drawing.Point(703, 310);
+            this.option6Lbl.Font = new System.Drawing.Font("Verdana Pro Cond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.option6Lbl.Location = new System.Drawing.Point(693, 310);
             this.option6Lbl.Name = "option6Lbl";
             this.option6Lbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.option6Lbl.Size = new System.Drawing.Size(46, 17);
+            this.option6Lbl.Size = new System.Drawing.Size(52, 20);
             this.option6Lbl.TabIndex = 11;
             this.option6Lbl.Text = "label6";
             this.option6Lbl.TextAlign = System.Drawing.ContentAlignment.TopRight;

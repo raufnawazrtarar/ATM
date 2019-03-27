@@ -37,6 +37,7 @@
             // 
             // openNewATM
             // 
+            this.openNewATM.Font = new System.Drawing.Font("Verdana Pro Cond", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.openNewATM.Location = new System.Drawing.Point(316, 308);
             this.openNewATM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.openNewATM.Name = "openNewATM";
@@ -49,6 +50,7 @@
             // shutDownBtn
             // 
             this.shutDownBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.shutDownBtn.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.shutDownBtn.Location = new System.Drawing.Point(15, 308);
             this.shutDownBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.shutDownBtn.Name = "shutDownBtn";
@@ -60,6 +62,7 @@
             // 
             // openATMwithout
             // 
+            this.openATMwithout.Font = new System.Drawing.Font("Arial Nova Cond", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.openATMwithout.Location = new System.Drawing.Point(168, 308);
             this.openATMwithout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.openATMwithout.Name = "openATMwithout";
